@@ -1,0 +1,12 @@
+1. Potrebno je loginovati se kao admin. Error pri loginu izbacuje informaciju da ne postoji korisnik sa datim username-om, a ako je username pogodjen
+prikazuje se greska da je lozinka netacna. Napadac dobija informaciju o tome koji username-ovi postoje. Prilikom login-a, kao admin za username se unose 
+ucestala korisnicka imena za admine dok se neki ne poklopi sa postojecim. Potrebno je pronaci lozinku, u debug-u console.log ispisuje kada sifra nije jednaka 
+upisanoj sifri, ove informacije korisne su za implementaciju ali kada je sistem otvoren za upotrebu, predstavljaju rizik, napadac na osnovu pogresno unete lozinke dobija infromaciju 
+o ispravnoj lozinci.
+Ili - sql injection dobijamo info o imenu tabele 
+bruce'-- select * from users where username='bruce' --
+SELECT username FROM users WHERE username='" + username + "' AND password='" + password + "'
+
+2.
+
+
