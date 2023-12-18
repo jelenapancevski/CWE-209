@@ -7,6 +7,8 @@ Ili - sql injection dobijamo info o imenu tabele
 bruce'-- select * from users where username='bruce' --
 SELECT username FROM users WHERE username='" + username + "' AND password='" + password + "'
 
-2.
+2.Sakriven flag unutar header-a HttpResponse-a. Moze bilo gde da se doda, na primer kada imamo dugme koje nas 
+vodi na neku drugu stranicu, samo se doda response.addHeader("Naziv", vrednost); Flag moze biti nesto korisno,
+ili nesto nebitno kao Flag_3 ili Flag_4.
 
 
