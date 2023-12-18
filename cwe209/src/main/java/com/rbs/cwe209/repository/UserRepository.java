@@ -1,15 +1,11 @@
 package com.rbs.cwe209.repository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.List;
 
 @Repository
 public class UserRepository {
@@ -35,4 +31,18 @@ public class UserRepository {
         }
         return null;
     }
+    public String getRole(String username,String password){
+        String query = "SELECT usertype FROM users WHERE username='"+username+"' and password='"+password+"'";
+        try (Connection connection = dataSource.getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet rs = statement.executeQuery(query)) {
+            if(rs.next()){
+                return  rs.getString("usertype");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }
