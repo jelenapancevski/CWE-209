@@ -10,7 +10,7 @@ public class UserController {
     public String login(Model model) {
         return "login";
     }
-    @GetMapping("/home")
+    @GetMapping({"/home","/"})
     public String home(Model model) {
         return "/home";
     }
