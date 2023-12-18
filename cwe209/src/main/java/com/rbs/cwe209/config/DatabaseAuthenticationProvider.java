@@ -64,8 +64,6 @@ public class DatabaseAuthenticationProvider implements AuthenticationProvider {
             return new UsernamePasswordAuthenticationToken(username, password, authorities);
         }
         else {
-           // String debugMessage = "Username: "+username+"\nEntered password: " + password+"Actual password: "+pass;
-            //System.out.println(debugMessage);
             throw new BadCredentialsException("Wrong password for username "+ username);
         }
 
