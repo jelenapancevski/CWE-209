@@ -9,3 +9,8 @@ h2 {
 .error {
     color:darkred;
 }
+
+#logo{
+    width: 50px;
+    height: 70px;
+}

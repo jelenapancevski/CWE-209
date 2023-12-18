@@ -19,6 +19,28 @@
 </head>
 
 <body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary" >
+
+        <a class="navbar-brand" th:href="@{/home}">Slatki zalogaji <img th:src="@{/backgrounds/logo.png}" alt="" id="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav" id="menu">
+
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/products}">Products</a>
+                </li>
+                <li class="nav-item">
+                    <form th:action="@{/logout}" method="post">
+                        <input type="submit" value="Sign Out" class="btn btn-primary" />
+                    </form>
+                </li>
+
+            </ul>
+        </div>
+</nav>
 <div class="container-fluid">
 
     <div class="row">
