@@ -1,11 +1,12 @@
 package com.rbs.cwe209.repository;
+import com.rbs.cwe209.model.Product;
+import com.rbs.cwe209.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Repository
 public class UserRepository {
@@ -38,6 +39,27 @@ public class UserRepository {
              ResultSet rs = statement.executeQuery(query)) {
             if(rs.next()){
                 return  rs.getString("usertype");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    private User createUser(ResultSet rs) throws SQLException {
+        Long id = rs.getLong(1);
+        String username = rs.getString(2);
+        String password = rs.getString(3);
+        String usertype = rs.getString(4);
+
+        return new User(id, username,password,usertype,null,null,null);
+    }
+    public User findUser(String username){
+        String query = "SELECT * FROM users WHERE username='"+username+"'";
+        try (Connection connection = dataSource.getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet rs = statement.executeQuery(query)) {
+            if(rs.next()){
+                return  createUser(rs);
             }
         } catch (SQLException e) {
             e.printStackTrace();

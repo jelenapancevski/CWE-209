@@ -1,5 +1,6 @@
 package com.rbs.cwe209.config;
 
+import com.rbs.cwe209.model.User;
 import com.rbs.cwe209.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -61,7 +62,9 @@ public class DatabaseAuthenticationProvider implements AuthenticationProvider {
             }
             * */
             authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
-            return new UsernamePasswordAuthenticationToken(username, password, authorities);
+            User user = userRepository.findUser(username);
+            return new UsernamePasswordAuthenticationToken(user, password, authorities);
+           // return new UsernamePasswordAuthenticationToken(username, password, authorities);
         }
         else {
             throw new BadCredentialsException("Wrong password for username "+ username);
