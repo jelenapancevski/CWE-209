@@ -7,7 +7,15 @@ Ili - sql injection dobijamo info o imenu tabele
 bruce'-- select * from users where username='bruce' --
 SELECT username FROM users WHERE username='" + username + "' AND password='" + password + "'
 
-2.Sakriven flag unutar header-a HttpResponse-a. Moze bilo gde da se doda, na primer kada imamo dugme koje nas 
+CWE-209 + SQLi
+3.Moramo da imamo stranicu za korpu i stranicu za pretragu po sastojcima, tj barem neku pogucnost pretrage torti po sastojcima.
+Kada se unese ima sastojka vrati nazive torti koje imaju dati sastojak. Ovde moze da se radi SQL injection.
+FLAG: na stranici za korpu, kada korisnik unese blabla promo kod onda se vrati greska koja kaze tipa: Entered promo code not found in Promotions. 
+Onda korisnik moze da ode na stranicu za pretragu sastojaka i uradi 'select * from promocodes-- i string mu vrati sve promokodove
+
+
+CWE-200
+Sakriven flag unutar header-a HttpResponse-a. Moze bilo gde da se doda, na primer kada imamo dugme koje nas 
 vodi na neku drugu stranicu, samo se doda response.addHeader("Naziv", vrednost); Flag moze biti nesto korisno,
 ili nesto nebitno kao Flag_3 ili Flag_4.
 
