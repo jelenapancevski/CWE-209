@@ -1,6 +1,7 @@
 package com.rbs.cwe209.model;
 
 import java.sql.Array;
+import java.util.List;
 
 
 public class Product {
@@ -8,7 +9,7 @@ public class Product {
 
     private Long _id;
 
-    private Array ingredients;
+    private List<String> ingredients;
 
     private String name;
     private String description;
@@ -22,11 +23,11 @@ public class Product {
     }
 // getters and setters
 
-    public Array getIngredients() {
+    public List<String> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(Array ingredients) {
+    public void setIngredients(List<String> ingredients) {
         this.ingredients = ingredients;
     }
 
@@ -74,7 +75,7 @@ public class Product {
         this.image = image;
     }
 
-    public Product(Long id, Array ingredients, String name, String description, String producttype, int price, String image) {
+    public Product(Long id, List<String> ingredients, String name, String description, String producttype, int price, String image) {
         this._id = id;
         this.ingredients = ingredients;
         this.name = name;

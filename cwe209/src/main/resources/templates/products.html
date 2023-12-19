@@ -11,8 +11,13 @@
     <script th:if="${session.debugMessage != null}" th:inline="javascript">
         /*<![CDATA[*/
         console.log('Debug Message:', /*[[${session.debugMessage}]]*/ '');
-        function product(name){
 
+        /*]]>*/
+    </script>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        function product(productId) {
+            window.location.href = '/product/' + productId;
         }
         /*]]>*/
     </script>
@@ -76,10 +81,10 @@
             <div class="card">
                 <div class="card-header">
                     <!--th:onclick="'product(\'' + ${product.name} + '\')'" -->
-                    <div class="card-title"  th:text="${product.name}"></div>
+                    <div class="card-title"  th:text="${product.name}" th:onclick="'product(\'' + ${product._id} + '\')'"></div>
                 </div>
                 <div class="card-content">
-                    <img class="card-image" th:src="@{'/products/' + ${product._id} + '.' + ${product.image}}" >
+                    <img class="card-image" th:src="@{'/products/' + ${product._id} + '.' + ${product.image}}" th:onclick="'product(\'' + ${product._id} + '\')'">
                 </div>
                 <div class="card-actions"></div>
             </div>

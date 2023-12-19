@@ -34,15 +34,36 @@ public class ProductRepository  {
 
     private Product createProduct(ResultSet rs) throws SQLException {
         Long id = rs.getLong(1);
-        Array ingridients = rs.getArray(2);
+        Array ingredientsArray = rs.getArray(2);
+        List<String> ingredients = new ArrayList<>();
+        if (ingredientsArray != null) {
+            Object[] ingredientObjects = (Object[]) ingredientsArray.getArray();
+            for (Object ingredientObject : ingredientObjects) {
+                if (ingredientObject instanceof String) {
+                    ingredients.add((String) ingredientObject);
+                }
+            }
+        }
         String name = rs.getString(3);
         String description = rs.getString(4);
         String producttype = rs.getString(5);
         int price = rs.getInt(6);
         String image = rs.getString(7);
-        return new Product(id, ingridients,name,description,producttype,price,image);
+        return new Product(id, ingredients,name,description,producttype,price,image);
     }
 
 
-
+    public Product getProduct(Long id) {
+        String sqlQuery = "SELECT * FROM " + table+" WHERE id="+id;
+        try (Connection connection = dataSource.getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet rs = statement.executeQuery(sqlQuery)) {
+            while (rs.next()) {
+                return (createProduct(rs));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
