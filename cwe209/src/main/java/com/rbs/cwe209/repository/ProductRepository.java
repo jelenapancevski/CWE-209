@@ -66,4 +66,21 @@ public class ProductRepository  {
         }
         return null;
     }
+
+    public List<String> getProductsWithIngredient(String ingredient) {
+        List<String> productNames = new ArrayList<>();
+        String sqlQuery = "SELECT name FROM products where ingredients LIKE '%" + ingredient+"%'";
+        System.out.println(sqlQuery);
+        try (Connection connection = dataSource.getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet rs = statement.executeQuery(sqlQuery)) {
+            while (rs.next()) {
+                productNames.add(rs.getString(1));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return  productNames;
+    }
+
 }

@@ -100,5 +100,7 @@ values (1,
                 'jpeg'
                 );
 
-
+insert into promocodes(id, name, discount)
+values (1, '24ForNew2024', 24),
+        (2, 'Store15', 15);
 

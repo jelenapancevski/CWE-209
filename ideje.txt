@@ -12,6 +12,7 @@ CWE-209 + SQLi
 Kada se unese ima sastojka vrati nazive torti koje imaju dati sastojak. Ovde moze da se radi SQL injection.
 FLAG: na stranici za korpu, kada korisnik unese blabla promo kod onda se vrati greska koja kaze tipa: Entered promo code not found in Promotions. 
 Onda korisnik moze da ode na stranicu za pretragu sastojaka i uradi 'select * from promocodes-- i string mu vrati sve promokodove
+kod za sql injection: badingredient' union select name from promocodes--
 
 
 CWE-200

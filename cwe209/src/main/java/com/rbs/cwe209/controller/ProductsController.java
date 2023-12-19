@@ -64,6 +64,16 @@ public class ProductsController {
         }
 
 
+    @PostMapping("/searchByIngredient")
+    public String searchByIngredient(@RequestParam(name = "ingredient", defaultValue = "chocolate") String ingredient, Model model) {
+        List<String> products = productRepository.getProductsWithIngredient(ingredient);
+        model.addAttribute("products", products);
+        return "searchResults";
+    }
+    @GetMapping("/searchByIngredient")
+    public String showSearchForm() {
+        return "searchForm";
+    }
 
 
 

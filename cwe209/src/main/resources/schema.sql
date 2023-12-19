@@ -11,7 +11,7 @@ create table users
 
 create table products
 (
-    id       int          NOT NULL AUTO_INCREMENT,
+    id int NOT NULL AUTO_INCREMENT,
     ingredients VARCHAR(255) ARRAY,
     name varchar(255) not null,
     description    varchar(500) not null,
@@ -20,4 +20,11 @@ create table products
     image varchar(255) not null,
     PRIMARY KEY (ID)
 
+);
+
+create table promocodes
+(
+    id int NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) not NULL,
+    discount int not NULL
 );
