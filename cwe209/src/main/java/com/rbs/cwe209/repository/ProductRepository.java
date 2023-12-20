@@ -1,5 +1,8 @@
 package com.rbs.cwe209.repository;
+import com.rbs.cwe209.config.DatabaseAuthenticationProvider;
 import com.rbs.cwe209.model.Product;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
@@ -12,6 +15,9 @@ import java.util.List;
 public class ProductRepository  {
     private static final String table = "products";
     private DataSource dataSource;
+
+    private static final Logger LOG = LoggerFactory.getLogger(DatabaseAuthenticationProvider.class);
+
 
     public ProductRepository(DataSource dataSource) {
         this.dataSource = dataSource;
@@ -58,7 +64,7 @@ public class ProductRepository  {
         try (Connection connection = dataSource.getConnection();
              Statement statement = connection.createStatement();
              ResultSet rs = statement.executeQuery(sqlQuery)) {
-            while (rs.next()) {
+            if (rs.next()) {
                 return (createProduct(rs));
             }
         } catch (SQLException e) {
@@ -70,7 +76,6 @@ public class ProductRepository  {
     public List<String> getProductsWithIngredient(String ingredient) {
         List<String> productNames = new ArrayList<>();
         String sqlQuery = "SELECT name FROM products where ingredients LIKE '%" + ingredient+"%'";
-        System.out.println(sqlQuery);
         try (Connection connection = dataSource.getConnection();
              Statement statement = connection.createStatement();
              ResultSet rs = statement.executeQuery(sqlQuery)) {
@@ -79,6 +84,7 @@ public class ProductRepository  {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+            LOG.error(e.toString());
         }
         return  productNames;
     }

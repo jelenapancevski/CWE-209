@@ -14,6 +14,7 @@ FLAG: na stranici za korpu, kada korisnik unese blabla promo kod onda se vrati g
 Onda korisnik moze da ode na stranicu za pretragu sastojaka i uradi 'select * from promocodes-- i string mu vrati sve promokodove
 kod za sql injection: badingredient' union select name from promocodes--
 
+4. u header neki da ubacimo gde su log informacije genijalno
 
 CWE-200
 Sakriven flag unutar header-a HttpResponse-a. Moze bilo gde da se doda, na primer kada imamo dugme koje nas 
