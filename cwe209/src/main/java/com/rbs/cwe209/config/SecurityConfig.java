@@ -16,7 +16,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/logs").hasRole("ADMIN")
                         .requestMatchers("/","/home","/products","/product/{id}","/addtobasket","/sendOrder","/basket",
-                                "/searchForm","/searchResults").hasRole("USER")
+                                "/searchForm","/searchResults","/promocode").hasRole("USER")
                         .requestMatchers("/resources/**").permitAll().anyRequest().permitAll()
 
                 )
