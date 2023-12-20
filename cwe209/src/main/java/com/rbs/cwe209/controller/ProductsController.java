@@ -3,6 +3,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rbs.cwe209.model.Order;
 import com.rbs.cwe209.model.Product;
+import com.rbs.cwe209.repository.CouponRepository;
 import com.rbs.cwe209.repository.ProductRepository;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration;
@@ -15,10 +16,12 @@ import java.util.List;
 @Controller
 public class ProductsController {
 
-    public ProductsController(ProductRepository productRepository) {
+    public ProductsController(ProductRepository productRepository, CouponRepository couponRepository) {
+        this.couponRepository = couponRepository;
         this.productRepository = productRepository;
     }
     ProductRepository productRepository;
+    CouponRepository couponRepository;
     @GetMapping("/products")
     public String getProducts(Model model) {
 
@@ -34,7 +37,9 @@ public class ProductsController {
         return "product";
     }
     @GetMapping("/basket")
-    public String getBasket(Model model) {
+    public String getBasket(HttpSession session, Model model) {
+        Order o = (Order) session.getAttribute("order");
+        model.addAttribute("order", o);
         return "basket";
     }
     @PostMapping("/sendOrder")
@@ -75,6 +80,37 @@ public class ProductsController {
         return "searchForm";
     }
 
+    @PostMapping("/createServerSessionOrder")
+    public String testSession(@RequestParam(name = "productName", defaultValue = "")String productName,
+                              @RequestParam(name="amount", defaultValue = "1") int amount,
+                              @RequestParam(name="price", defaultValue = "") int price, HttpSession session){
 
+        if (session.getAttribute("order") == null) {
+            Order o = new Order("test");
+            //treba dohvatiti ime trenutnog ulogovanog,
+            // mada nam mozda ovo i ne treba ako necemo cuvati narudzbine u bazi
+            o.addItem(productName, amount, price);
+            session.setAttribute("order", o);
+        }
+        else{
+            Order o =  (Order) session.getAttribute("order");
+            o.addItem(productName, amount, price);
+            session.setAttribute("order", o);
+        }
+        return "redirect:/products";
+    }
 
+    @PostMapping("/applyCoupon")
+    public String applyCoupon(@RequestParam(name = "couponCode", defaultValue = "") String couponCode
+            , HttpSession session){
+        int discount = couponRepository.getCouponDiscount(couponCode);
+        if(discount == -1){
+            //greska
+            return"redirect:/basket?badCoupon=true";
+        }
+        else{
+            //dobar jetreba smanjiti cenu ukupnu
+            return"redirect:/basket";
+        }
+    }
 }

@@ -40,7 +40,7 @@
                     <a class="nav-link" th:href="@{/products}">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="updateOrderAndNavigate()">Basket</a>
+                    <a class="nav-link" th:href="@{/basket}">Basket</a>
                 </li>
                 <li class="nav-item">
                     <form th:action="@{/logout}" method="post">
@@ -79,17 +79,17 @@
 
         </div>
     </div>
-    <div class="row sameheight">
+    <div class="row sameheight" style="text-align:center">
 
         <div class="col-lg-4 col-md-6 col-sm-6 info-sameheight" th:each="product : ${products}">
 
-            <div class="card">
+            <div class="card clickableProduct">
                 <div class="card-header">
                     <!--th:onclick="'product(\'' + ${product.name} + '\')'" -->
                     <div class="card-title"  th:text="${product.name}" th:onclick="'product(\'' + ${product._id} + '\')'"></div>
                 </div>
                 <div class="card-content">
-                    <img class="card-image" th:src="@{'/products/' + ${product._id} + '.' + ${product.image}}" th:onclick="'product(\'' + ${product._id} + '\')'">
+                    <img class="card-image" th:src="@{'/products/' + ${product._id} + '.' + ${product.image}}"  th:onclick="'product(\'' + ${product._id} + '\')'">
                 </div>
                 <div class="card-actions"></div>
             </div>

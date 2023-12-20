@@ -130,20 +130,25 @@
 
                             <div class="row "  >
                                 <div class="col">
-                                    <table>
-                                        <tr>
-                                            <td>
-                                                <div class="form-group">
-                                                    <label for="amount"></label>
-                                                    <!-- -->
-                                                    <input type="number" class="form-control" id="amount" name="amount" min="1" step="1" placeholder="Amount" />
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary" id="orderbutton" onclick="addProductToBasket(document.getElementById('amount').value)">Add to basket</button>
-                                            </td>
-                                        </tr>
-                                    </table>
+                                    <form method="post" th:action="@{/createServerSessionOrder}">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <label for="amount"></label>
+                                                        <!-- -->
+                                                        <input type="number" class="form-control" id="amount" name="amount" min="1" step="1" placeholder="Amount" />
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button type="submit" class="btn btn-primary" id="orderbutton">Add to basket</button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <input type="text" th:value="${product.name}" id="productName" name="productName" hidden></input>
+                                        <input type="text" th:value="${product.price}" name="price" hidden></input>
+                                    </form>
+
 
 
                                 </div>
