@@ -5,6 +5,7 @@ import com.rbs.cwe209.model.Order;
 import com.rbs.cwe209.model.Product;
 //import com.rbs.cwe209.repository.CouponRepository;
 import com.rbs.cwe209.repository.ProductRepository;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,37 +37,11 @@ public class ProductsController {
         return "product";
     }
     @GetMapping("/basket")
-    public String getBasket(HttpSession session, Model model) {
+    public String getBasket(HttpSession session, Model model, HttpServletRequest request) {
         Order o = (Order) session.getAttribute("order");
         model.addAttribute("order", o);
         return "basket";
     }
-    @PostMapping("/sendOrder")
-        public String setBasket(@RequestParam(name = "order", required = false) String orderJson, Model model, HttpSession session) {
-            if (orderJson != null) {
-                // If the order is present in the form submission, convert it to an object
-                ObjectMapper objectMapper = new ObjectMapper();
-                System.out.println(orderJson);
-                Order order = null;
-                try {
-                    order = objectMapper.readValue(orderJson, Order.class);
-                    // Add the order to the model
-                    System.out.println(order);
-                    model.addAttribute("order", order);
-
-                    // Optionally, you can also save it in session if needed
-                    session.setAttribute("order", order);
-                } catch (JsonProcessingException e) {
-                    throw new RuntimeException(e);
-                }
-
-
-            }
-            return "basket";
-            // Return the name of your Thymeleaf template
-
-        }
-
 
     @PostMapping("/searchByIngredient")
     public String searchByIngredient(@RequestParam(name = "ingredient", defaultValue = "chocolate") String ingredient, Model model) {
@@ -82,7 +57,7 @@ public class ProductsController {
     @PostMapping("/createServerSessionOrder")
     public String testSession(@RequestParam(name = "productName", defaultValue = "")String productName,
                               @RequestParam(name="amount", defaultValue = "1") int amount,
-                              @RequestParam(name="price", defaultValue = "") int price, HttpSession session){
+                              @RequestParam(name="price", defaultValue = "") int price, HttpSession session,HttpServletRequest request){
 
         if (session.getAttribute("order") == null) {
             Order o = new Order("test");
@@ -96,7 +71,8 @@ public class ProductsController {
             o.addProduct(productName, amount, price);
             session.setAttribute("order", o);
         }
-        return "redirect:/products";
+        String referer = request.getHeader("Referer");
+        return "redirect:"+ referer;
     }
 
 //    @PostMapping("/applyCoupon")

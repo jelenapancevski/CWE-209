@@ -138,8 +138,8 @@
                         </tr>
                         <tr>
                             <td>
-                                <span th:if="${promocodeSet != null}" th:text="${promocodeSet.name}"></span>
-                                <span th:if="${errorMessage != null}" th:text="${errorMessage}"></span>
+                                <span th:if="${session.promocodeSet != null}" th:text="${session.promocodeSet.name}"></span>
+                                <span th:if="${session.errorMessage != null}" th:text="${session.errorMessage}"></span>
 <!--                                <span th:if="${param.badCoupon}" style="color:red">Entered promo code not found in promocodes table!</span>-->
                             </td>
                         </tr>

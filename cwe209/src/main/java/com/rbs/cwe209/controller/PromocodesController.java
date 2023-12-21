@@ -4,6 +4,7 @@ import com.rbs.cwe209.config.DatabaseAuthenticationProvider;
 import com.rbs.cwe209.model.Promocode;
 import com.rbs.cwe209.repository.ProductRepository;
 import com.rbs.cwe209.repository.PromocodeRepository;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import org.slf4j.Logger;
@@ -24,20 +25,19 @@ public class PromocodesController {
     }
 
     @PostMapping("/promocode")
-    public String getPromocode(@RequestParam(name="couponCode") String promoCode, HttpSession session) {
+    public String getPromocode(@RequestParam(name="couponCode") String promoCode, HttpServletRequest request) {
         Promocode promocode = promocodeRepository.findPromocode(promoCode);
-        boolean hello = promocode==null;
-        System.out.println("da li je null " + hello);
-        System.out.println(promoCode);
         if(promocode!=null){
-            session.setAttribute("promocodeSet",promocode);
-            session.removeAttribute("errorMessage");
+           request.getSession().setAttribute("promocodeSet",promocode);
+            request.getSession().removeAttribute("errorMessage");
 
         }
         else {
-            session.removeAttribute("promocodeSet");
-            session.setAttribute("errorMessage", "Promocode doesn't exist");
+            request.getSession().removeAttribute("promocodeSet");
+            request.getSession().setAttribute("errorMessage", "Promocode doesn't exist");
         }
-        return "redirect:/basket";
+
+        String referer = request.getHeader("Referer");
+        return "redirect:"+ referer;
     }
 }
