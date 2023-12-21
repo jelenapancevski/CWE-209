@@ -50,8 +50,10 @@ public class UserRepository {
         String username = rs.getString(2);
         String password = rs.getString(3);
         String usertype = rs.getString(4);
-
-        return new User(id, username,password,usertype,null,null,null);
+        String firstname = rs.getString(5);
+        String lastname = rs.getString(6);
+        String address = rs.getString(7);
+        return new User(id, username,password,usertype,firstname,lastname,address);
     }
     public User findUser(String username){
         String query = "SELECT * FROM users WHERE username='"+username+"'";

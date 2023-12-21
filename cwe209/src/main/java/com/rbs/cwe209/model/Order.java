@@ -1,9 +1,7 @@
 package com.rbs.cwe209.model;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Hashtable;
-import java.util.List;
 
 
 public class Order {
@@ -12,21 +10,30 @@ public class Order {
     private String buyer;
     // private String<Object> products ;  ??
     private Date date;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     private String status; // pending, accepted, denied
     // private   notified:Boolean;
     //private   _user:User;
     private int totalPrice;
 
-    private Hashtable<String, CakeInfo> items;
+    private Hashtable<String, CakeInfo> products;
 
-    public void addItem(String name, int amount, int price) {
-        if(items.containsKey(name)){
-            int current = items.get(name).amount;
+    public void addProduct(String name, int amount, int price) {
+        if(products.containsKey(name)){
+            int current = products.get(name).amount;
             int newVal = current + amount;
-            items.put(name, new CakeInfo(newVal,price));
+            products.put(name, new CakeInfo(newVal,price));
         }
         else{
-            items.put(name,  new CakeInfo(amount,price));
+            products.put(name,  new CakeInfo(amount,price));
         }
         calculateTotalPrice();
     }
@@ -36,9 +43,10 @@ public class Order {
     }
 
     public Order(String name) {
-        items = new Hashtable<>();
+        products = new Hashtable<>();
         date = new Date();
         buyer = name;
+        status = "pending";
     }
 
     public String getBuyer() {
@@ -49,13 +57,13 @@ public class Order {
         return date;
     }
 
-    public Hashtable<String, CakeInfo> getItems() {
-        return items;
+    public Hashtable<String, CakeInfo> getProducts() {
+        return products;
     }
 
     private void calculateTotalPrice(){
         totalPrice = 0;
-        for(CakeInfo ci : items.values()){
+        for(CakeInfo ci : products.values()){
             totalPrice+= ci.amount*ci.price;
         }
     }

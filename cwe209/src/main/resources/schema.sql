@@ -6,6 +6,9 @@ create table users
     username varchar(255) not null,
     password varchar(255) not null,
     usertype    varchar(255) not null,
+    firstname    varchar(255) not null,
+    lastname    varchar(255) not null,
+    address    varchar(255) not null,
     PRIMARY KEY (ID)
 );
 

@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{/css/product.css}" >
     <script th:src="@{/js/product.js}"></script>
-    <script th:src="@{/js/basket.js}"></script>
     <meta name="_csrf" th:content="${_csrf.token}" />
     <meta name="_csrf_header" th:content="${_csrf.headerName}" />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -17,49 +16,12 @@
 
         /*]]>*/
     </script>
-    <script th:inline="javascript" th:if="${product!=null}">
-        /*<![CDATA[*/
-        function addProductToBasket(amount) {
-            amount = parseInt(amount);
-            if (isNaN(amount)){
-                console.log("Invalid input: Not a valid number FLAG4_Found");
-                return;
-            }
-
-            var buyer = /*[[${#authentication.getPrincipal()?._id}]]*/ null;
-            var buyertype = /*[[${#authentication.getPrincipal()?.usertype}]]*/ null;
-            var order = JSON.parse(sessionStorage.getItem("order"));
-            if (order == null) {
-                // New order
-                order = {
-                    date: new Date(),
-                    notified: null,
-                    status: 'pending',
-                    products: []
-                };
-            }
-            var found = false;
-            order.products.forEach(function(product) {
-                if (product['productid'] == /*[[${product._id}]]*/) {
-                    product['amount'] += amount;
-                    found = true;
-                }
-            });
-            if (!found) {
-                order.products.push({"productid": /*[[${product._id}]]*/, "amount": amount});
-            }
-            sessionStorage.setItem("order", JSON.stringify(order));
-            document.getElementById('amount').value=null;
-            document.getElementById('message').innerHTML = "Product is succesfully added to the basket!";
-        }
-        /*]]>*/
-    </script>
 </head>
 
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary" >
 
-    <a class="navbar-brand" th:href="@{/home}">Slatki zalogaji <img th:src="@{/backgrounds/logo.png}" alt="" id="logo"></a>
+    <a class="navbar-brand" th:href="@{/home}"> Delicious corner <img th:src="@{/backgrounds/logo.png}" alt="" id="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -71,7 +33,10 @@
                 <a class="nav-link" th:href="@{/products}">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" onclick="updateOrderAndNavigate()">Basket</a>
+                <a class="nav-link" th:href="@{/basket}">Basket</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/searchByIngredient}">Search by ingredients</a>
             </li>
             <li class="nav-item">
                 <form th:action="@{/logout}" method="post">

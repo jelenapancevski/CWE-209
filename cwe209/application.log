@@ -1,371 +1,214 @@
-2023-12-20T00:04:48.790+01:00  INFO 1056 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2023-12-20T00:04:48.794+01:00  INFO 1056 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6b2ef50e]]
-2023-12-20T00:04:48.794+01:00  INFO 1056 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2023-12-20T00:04:48.820+01:00  INFO 1056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-20T00:04:48.823+01:00  INFO 1056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-12-20T00:05:05.108+01:00  INFO 22040 --- [main] com.rbs.cwe209.Cwe209Application         : Starting Cwe209Application using Java 17.0.9 with PID 22040 (C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209\target\classes started by Dell in C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209)
-2023-12-20T00:05:05.111+01:00  INFO 22040 --- [main] com.rbs.cwe209.Cwe209Application         : No active profile set, falling back to 1 default profile: "default"
-2023-12-20T00:05:06.501+01:00  INFO 22040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-12-20T00:05:06.511+01:00  INFO 22040 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-20T00:05:06.511+01:00  INFO 22040 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-20T00:05:06.679+01:00  INFO 22040 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2023-12-20T00:05:06.685+01:00  INFO 22040 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-20T00:05:06.685+01:00  INFO 22040 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1519 ms
-2023-12-20T00:05:06.726+01:00  INFO 22040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-20T00:05:06.940+01:00  INFO 22040 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cwe209 user=SA
-2023-12-20T00:05:06.943+01:00  INFO 22040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-20T00:05:06.956+01:00  INFO 22040 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cwe209'
-2023-12-20T00:05:07.628+01:00  INFO 22040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2e0ad709, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1fe8f5e8, org.springframework.security.web.context.SecurityContextHolderFilter@33e3bd2e, org.springframework.security.web.header.HeaderWriterFilter@72c4a3aa, org.springframework.web.filter.CorsFilter@39449465, org.springframework.security.web.csrf.CsrfFilter@4c4c7d6c, org.springframework.security.web.authentication.logout.LogoutFilter@597d48ca, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7b297740, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30508066, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9408857, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e3dd5ce, org.springframework.security.web.access.ExceptionTranslationFilter@6af87130, org.springframework.security.web.access.intercept.AuthorizationFilter@154b8cb6]
-2023-12-20T00:05:07.936+01:00  INFO 22040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-12-20T00:05:07.939+01:00  INFO 22040 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2023-12-20T00:05:07.939+01:00  INFO 22040 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@37fef327]]
-2023-12-20T00:05:07.939+01:00  INFO 22040 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2023-12-20T00:05:07.947+01:00  INFO 22040 --- [main] com.rbs.cwe209.Cwe209Application         : Started Cwe209Application in 3.511 seconds (process running for 4.422)
-2023-12-20T00:05:08.166+01:00  INFO 22040 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-20T00:05:08.166+01:00  INFO 22040 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-20T00:05:08.167+01:00  INFO 22040 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-12-20T00:05:08.363+01:00  WARN 22040 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [148] milliseconds.
-2023-12-20T00:05:15.812+01:00  INFO 22040 --- [http-nio-8080-exec-6] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as admin/admin
-2023-12-20T00:06:07.904+01:00  INFO 22040 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
-2023-12-20T00:07:12.425+01:00  INFO 22040 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2023-12-20T00:07:12.426+01:00  INFO 22040 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@37fef327]]
-2023-12-20T00:07:12.426+01:00  INFO 22040 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2023-12-20T00:07:12.446+01:00  INFO 22040 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-20T00:07:12.448+01:00  INFO 22040 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-12-20T00:07:16.783+01:00  INFO 29364 --- [main] com.rbs.cwe209.Cwe209Application         : Starting Cwe209Application using Java 17.0.9 with PID 29364 (C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209\target\classes started by Dell in C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209)
-2023-12-20T00:07:16.787+01:00  INFO 29364 --- [main] com.rbs.cwe209.Cwe209Application         : No active profile set, falling back to 1 default profile: "default"
-2023-12-20T00:07:18.323+01:00  INFO 29364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-12-20T00:07:18.332+01:00  INFO 29364 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-20T00:07:18.333+01:00  INFO 29364 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-20T00:07:18.523+01:00  INFO 29364 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2023-12-20T00:07:18.528+01:00  INFO 29364 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-20T00:07:18.530+01:00  INFO 29364 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1668 ms
-2023-12-20T00:07:18.558+01:00  INFO 29364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-20T00:07:18.757+01:00  INFO 29364 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cwe209 user=SA
-2023-12-20T00:07:18.758+01:00  INFO 29364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-20T00:07:18.770+01:00  INFO 29364 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cwe209'
-2023-12-20T00:07:19.269+01:00  INFO 29364 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@123307c4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1693ff90, org.springframework.security.web.context.SecurityContextHolderFilter@5403907, org.springframework.security.web.header.HeaderWriterFilter@18a98913, org.springframework.web.filter.CorsFilter@47058864, org.springframework.security.web.csrf.CsrfFilter@3344d163, org.springframework.security.web.authentication.logout.LogoutFilter@7a36c83a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@743d0d44, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b06d46d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@25a5c8e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ad3f70a, org.springframework.security.web.access.ExceptionTranslationFilter@13f40d71, org.springframework.security.web.access.intercept.AuthorizationFilter@7af327e3]
-2023-12-20T00:07:19.589+01:00  INFO 29364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-12-20T00:07:19.593+01:00  INFO 29364 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2023-12-20T00:07:19.594+01:00  INFO 29364 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@547aaa32]]
-2023-12-20T00:07:19.594+01:00  INFO 29364 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2023-12-20T00:07:19.603+01:00  INFO 29364 --- [main] com.rbs.cwe209.Cwe209Application         : Started Cwe209Application in 3.389 seconds (process running for 4.403)
-2023-12-20T00:07:19.645+01:00  INFO 29364 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-20T00:07:19.646+01:00  INFO 29364 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-20T00:07:19.647+01:00  INFO 29364 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-12-20T00:07:19.834+01:00  WARN 29364 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [147] milliseconds.
-2023-12-20T00:07:25.545+01:00  INFO 29364 --- [http-nio-8080-exec-4] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as admin/admin
-2023-12-20T00:08:19.561+01:00  INFO 29364 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
-2023-12-20T00:08:25.669+01:00  INFO 29364 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2023-12-20T00:08:25.669+01:00  INFO 29364 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@547aaa32]]
-2023-12-20T00:08:25.669+01:00  INFO 29364 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2023-12-20T00:08:25.687+01:00  INFO 29364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-20T00:08:25.690+01:00  INFO 29364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-12-20T00:08:28.974+01:00  INFO 13500 --- [main] com.rbs.cwe209.Cwe209Application         : Starting Cwe209Application using Java 17.0.9 with PID 13500 (C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209\target\classes started by Dell in C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209)
-2023-12-20T00:08:28.976+01:00  INFO 13500 --- [main] com.rbs.cwe209.Cwe209Application         : No active profile set, falling back to 1 default profile: "default"
-2023-12-20T00:08:30.053+01:00  INFO 13500 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-12-20T00:08:30.063+01:00  INFO 13500 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-20T00:08:30.064+01:00  INFO 13500 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-20T00:08:30.220+01:00  INFO 13500 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2023-12-20T00:08:30.224+01:00  INFO 13500 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-20T00:08:30.224+01:00  INFO 13500 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1194 ms
-2023-12-20T00:08:30.249+01:00  INFO 13500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-20T00:08:30.475+01:00  INFO 13500 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cwe209 user=SA
-2023-12-20T00:08:30.476+01:00  INFO 13500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-20T00:08:30.487+01:00  INFO 13500 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cwe209'
-2023-12-20T00:08:30.900+01:00  INFO 13500 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6ce26986, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2bf2d6eb, org.springframework.security.web.context.SecurityContextHolderFilter@7d50f2a8, org.springframework.security.web.header.HeaderWriterFilter@374ccb9, org.springframework.web.filter.CorsFilter@6d6cd1e0, org.springframework.security.web.csrf.CsrfFilter@13f40d71, org.springframework.security.web.authentication.logout.LogoutFilter@6dd79214, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4b3a01d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37ca3ca8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@191ec193, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@76a9a009, org.springframework.security.web.access.ExceptionTranslationFilter@2c7c0e36, org.springframework.security.web.access.intercept.AuthorizationFilter@48f2054d]
-2023-12-20T00:08:31.178+01:00  INFO 13500 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-12-20T00:08:31.180+01:00  INFO 13500 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2023-12-20T00:08:31.181+01:00  INFO 13500 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6f867b0c]]
-2023-12-20T00:08:31.182+01:00  INFO 13500 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2023-12-20T00:08:31.190+01:00  INFO 13500 --- [main] com.rbs.cwe209.Cwe209Application         : Started Cwe209Application in 2.692 seconds (process running for 3.38)
-2023-12-20T00:08:35.475+01:00  INFO 13500 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-20T00:08:35.475+01:00  INFO 13500 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-20T00:08:35.476+01:00  INFO 13500 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-12-20T00:08:35.626+01:00  WARN 13500 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [109] milliseconds.
-2023-12-20T00:08:41.353+01:00  INFO 13500 --- [http-nio-8080-exec-4] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as admin/admin
-2023-12-20T00:09:21.715+01:00  INFO 13500 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2023-12-20T00:09:21.715+01:00  INFO 13500 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6f867b0c]]
-2023-12-20T00:09:21.715+01:00  INFO 13500 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2023-12-20T00:09:21.736+01:00  INFO 13500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-20T00:09:21.738+01:00  INFO 13500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-12-20T00:10:40.660+01:00  INFO 18740 --- [main] com.rbs.cwe209.Cwe209Application         : Starting Cwe209Application using Java 17.0.9 with PID 18740 (C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209\target\classes started by Dell in C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209)
-2023-12-20T00:10:40.664+01:00  INFO 18740 --- [main] com.rbs.cwe209.Cwe209Application         : No active profile set, falling back to 1 default profile: "default"
-2023-12-20T00:10:41.856+01:00  INFO 18740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-12-20T00:10:41.864+01:00  INFO 18740 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-20T00:10:41.864+01:00  INFO 18740 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-20T00:10:42.027+01:00  INFO 18740 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2023-12-20T00:10:42.032+01:00  INFO 18740 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-20T00:10:42.032+01:00  INFO 18740 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1313 ms
-2023-12-20T00:10:42.057+01:00  INFO 18740 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-20T00:10:42.230+01:00  INFO 18740 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cwe209 user=SA
-2023-12-20T00:10:42.232+01:00  INFO 18740 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-20T00:10:42.243+01:00  INFO 18740 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cwe209'
-2023-12-20T00:10:42.653+01:00  INFO 18740 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4faf1f4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f811029, org.springframework.security.web.context.SecurityContextHolderFilter@154b8cb6, org.springframework.security.web.header.HeaderWriterFilter@6321a5aa, org.springframework.web.filter.CorsFilter@7f2b584b, org.springframework.security.web.csrf.CsrfFilter@b06d46d, org.springframework.security.web.authentication.logout.LogoutFilter@9b2dc56, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@76a9a009, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b7554d4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57ce2898, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5866731, org.springframework.security.web.access.ExceptionTranslationFilter@37ca3ca8, org.springframework.security.web.access.intercept.AuthorizationFilter@6d6cd1e0]
-2023-12-20T00:10:42.940+01:00  INFO 18740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-12-20T00:10:42.944+01:00  INFO 18740 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2023-12-20T00:10:42.945+01:00  INFO 18740 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@45e7bb79]]
-2023-12-20T00:10:42.945+01:00  INFO 18740 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2023-12-20T00:10:42.951+01:00  INFO 18740 --- [main] com.rbs.cwe209.Cwe209Application         : Started Cwe209Application in 2.809 seconds (process running for 3.568)
-2023-12-20T00:10:43.006+01:00  INFO 18740 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-20T00:10:43.007+01:00  INFO 18740 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-20T00:10:43.008+01:00  INFO 18740 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-12-20T00:10:43.168+01:00  WARN 18740 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [123] milliseconds.
-2023-12-20T00:10:49.873+01:00  INFO 18740 --- [http-nio-8080-exec-4] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as admin/admin
-2023-12-20T00:10:53.093+01:00 ERROR 18740 --- [http-nio-8080-exec-2] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-2] Exception processing template "sendOrder": Error resolving template [sendOrder], template might not exist or might not be accessible by any of the configured Template Resolvers
-
-org.thymeleaf.exceptions.TemplateInputException: Error resolving template [sendOrder], template might not exist or might not be accessible by any of the configured Template Resolvers
-	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
-	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
-	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.16.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.16.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:131) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
-
-2023-12-20T00:10:53.099+01:00 ERROR 18740 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [sendOrder], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
-
-org.thymeleaf.exceptions.TemplateInputException: Error resolving template [sendOrder], template might not exist or might not be accessible by any of the configured Template Resolvers
-	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077) ~[thymeleaf-3.1.2.RELEASE.jar:3.1.2.RELEASE]
-	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
-	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192) ~[thymeleaf-spring6-3.1.2.RELEASE.jar:3.1.2.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1431) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1167) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.16.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.1.jar:6.1.1]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.16.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:131) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.0.jar:6.2.0]
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.1.jar:6.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.16.jar:10.1.16]
-	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
-
-2023-12-20T00:11:42.913+01:00  INFO 18740 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
-2023-12-20T00:12:41.704+01:00  INFO 18740 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2023-12-20T00:12:41.705+01:00  INFO 18740 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@45e7bb79]]
-2023-12-20T00:12:41.705+01:00  INFO 18740 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2023-12-20T00:12:41.722+01:00  INFO 18740 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-20T00:12:41.724+01:00  INFO 18740 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-12-20T00:12:49.089+01:00  INFO 15132 --- [main] com.rbs.cwe209.Cwe209Application         : Starting Cwe209Application using Java 17.0.9 with PID 15132 (C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209\target\classes started by Dell in C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209)
-2023-12-20T00:12:49.092+01:00  INFO 15132 --- [main] com.rbs.cwe209.Cwe209Application         : No active profile set, falling back to 1 default profile: "default"
-2023-12-20T00:12:50.278+01:00  INFO 15132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-12-20T00:12:50.289+01:00  INFO 15132 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-20T00:12:50.290+01:00  INFO 15132 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-20T00:12:50.472+01:00  INFO 15132 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2023-12-20T00:12:50.478+01:00  INFO 15132 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-20T00:12:50.478+01:00  INFO 15132 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1320 ms
-2023-12-20T00:12:50.507+01:00  INFO 15132 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-20T00:12:50.695+01:00  INFO 15132 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cwe209 user=SA
-2023-12-20T00:12:50.697+01:00  INFO 15132 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-20T00:12:50.708+01:00  INFO 15132 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cwe209'
-2023-12-20T00:12:51.134+01:00  INFO 15132 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4f811029, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f2b584b, org.springframework.security.web.context.SecurityContextHolderFilter@7b297740, org.springframework.security.web.header.HeaderWriterFilter@1c7f9861, org.springframework.web.filter.CorsFilter@5866731, org.springframework.security.web.csrf.CsrfFilter@25a5c8e, org.springframework.security.web.authentication.logout.LogoutFilter@621f23ac, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@9785903, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57ce2898, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ea930eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56a05324, org.springframework.security.web.access.ExceptionTranslationFilter@191ec193, org.springframework.security.web.access.intercept.AuthorizationFilter@76a9a009]
-2023-12-20T00:12:51.469+01:00  INFO 15132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-12-20T00:12:51.470+01:00  INFO 15132 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2023-12-20T00:12:51.471+01:00  INFO 15132 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@605c7a9e]]
-2023-12-20T00:12:51.471+01:00  INFO 15132 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2023-12-20T00:12:51.478+01:00  INFO 15132 --- [main] com.rbs.cwe209.Cwe209Application         : Started Cwe209Application in 2.896 seconds (process running for 3.688)
-2023-12-20T00:12:56.793+01:00  INFO 15132 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-20T00:12:56.793+01:00  INFO 15132 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-20T00:12:56.794+01:00  INFO 15132 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-12-20T00:12:56.974+01:00  WARN 15132 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [139] milliseconds.
-2023-12-20T00:13:03.818+01:00  INFO 15132 --- [http-nio-8080-exec-4] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as admin/admin
-2023-12-20T00:13:51.450+01:00  INFO 15132 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
-2023-12-20T00:14:39.772+01:00  INFO 15132 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2023-12-20T00:14:39.773+01:00  INFO 15132 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@605c7a9e]]
-2023-12-20T00:14:39.773+01:00  INFO 15132 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2023-12-20T00:14:39.793+01:00  INFO 15132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-20T00:14:39.795+01:00  INFO 15132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-12-20T00:14:44.205+01:00  INFO 21524 --- [main] com.rbs.cwe209.Cwe209Application         : Starting Cwe209Application using Java 17.0.9 with PID 21524 (C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209\target\classes started by Dell in C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209)
-2023-12-20T00:14:44.208+01:00  INFO 21524 --- [main] com.rbs.cwe209.Cwe209Application         : No active profile set, falling back to 1 default profile: "default"
-2023-12-20T00:14:45.278+01:00  INFO 21524 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2023-12-20T00:14:45.286+01:00  INFO 21524 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-12-20T00:14:45.287+01:00  INFO 21524 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2023-12-20T00:14:45.453+01:00  INFO 21524 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2023-12-20T00:14:45.457+01:00  INFO 21524 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-12-20T00:14:45.457+01:00  INFO 21524 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1201 ms
-2023-12-20T00:14:45.482+01:00  INFO 21524 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-12-20T00:14:45.644+01:00  INFO 21524 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cwe209 user=SA
-2023-12-20T00:14:45.645+01:00  INFO 21524 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-12-20T00:14:45.657+01:00  INFO 21524 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cwe209'
-2023-12-20T00:14:46.189+01:00  INFO 21524 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@149aa7b2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ca3648, org.springframework.security.web.context.SecurityContextHolderFilter@4ee8051c, org.springframework.security.web.header.HeaderWriterFilter@39449465, org.springframework.web.filter.CorsFilter@2a99ca99, org.springframework.security.web.csrf.CsrfFilter@2c7c0e36, org.springframework.security.web.authentication.logout.LogoutFilter@2f4d32bf, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@342beaf6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53016b11, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7af327e3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39f0c343, org.springframework.security.web.access.ExceptionTranslationFilter@2e0ad709, org.springframework.security.web.access.intercept.AuthorizationFilter@11e71181]
-2023-12-20T00:14:46.480+01:00  INFO 21524 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2023-12-20T00:14:46.483+01:00  INFO 21524 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2023-12-20T00:14:46.484+01:00  INFO 21524 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6d0114c0]]
-2023-12-20T00:14:46.485+01:00  INFO 21524 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2023-12-20T00:14:46.491+01:00  INFO 21524 --- [main] com.rbs.cwe209.Cwe209Application         : Started Cwe209Application in 2.785 seconds (process running for 3.445)
-2023-12-20T00:14:47.811+01:00  INFO 21524 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-12-20T00:14:47.811+01:00  INFO 21524 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-12-20T00:14:47.812+01:00  INFO 21524 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-12-20T00:14:47.955+01:00  WARN 21524 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [110] milliseconds.
-2023-12-20T00:14:53.147+01:00  INFO 21524 --- [http-nio-8080-exec-5] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as admin/admin
-2023-12-20T00:15:19.137+01:00  INFO 21524 --- [http-nio-8080-exec-8] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as admin/admin
-2023-12-20T00:15:46.463+01:00  INFO 21524 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
-2023-12-20T00:17:02.806+01:00  INFO 21524 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2023-12-20T00:17:02.806+01:00  INFO 21524 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6d0114c0]]
-2023-12-20T00:17:02.806+01:00  INFO 21524 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2023-12-20T00:17:02.824+01:00  INFO 21524 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-12-20T00:17:02.826+01:00  INFO 21524 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-21T01:44:37.069+01:00  INFO 21224 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2023-12-21T01:46:20.837+01:00  INFO 21224 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2023-12-21T01:46:20.837+01:00  INFO 21224 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@605c7a9e]]
+2023-12-21T01:46:20.837+01:00  INFO 21224 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2023-12-21T01:46:20.863+01:00  INFO 21224 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-21T01:46:20.867+01:00  INFO 21224 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-21T01:46:25.920+01:00  INFO 12652 --- [main] com.rbs.cwe209.Cwe209Application         : Starting Cwe209Application using Java 17.0.9 with PID 12652 (C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209\target\classes started by Dell in C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209)
+2023-12-21T01:46:25.923+01:00  INFO 12652 --- [main] com.rbs.cwe209.Cwe209Application         : No active profile set, falling back to 1 default profile: "default"
+2023-12-21T01:46:27.026+01:00  INFO 12652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-21T01:46:27.035+01:00  INFO 12652 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-21T01:46:27.035+01:00  INFO 12652 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-21T01:46:27.184+01:00  INFO 12652 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-21T01:46:27.189+01:00  INFO 12652 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-21T01:46:27.189+01:00  INFO 12652 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1213 ms
+2023-12-21T01:46:27.216+01:00  INFO 12652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-21T01:46:27.390+01:00  INFO 12652 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cwe209 user=SA
+2023-12-21T01:46:27.392+01:00  INFO 12652 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-21T01:46:27.404+01:00  INFO 12652 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cwe209'
+2023-12-21T01:46:27.803+01:00  INFO 12652 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2a99ca99, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39f0c343, org.springframework.security.web.context.SecurityContextHolderFilter@53016b11, org.springframework.security.web.header.HeaderWriterFilter@16f7f59f, org.springframework.web.filter.CorsFilter@781654f8, org.springframework.security.web.csrf.CsrfFilter@374ccb9, org.springframework.security.web.authentication.logout.LogoutFilter@6ce26986, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@56cfe6be, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@743d0d44, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35563e4c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2abc55c4, org.springframework.security.web.access.ExceptionTranslationFilter@39449465, org.springframework.security.web.access.intercept.AuthorizationFilter@222acad]
+2023-12-21T01:46:28.095+01:00  INFO 12652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-21T01:46:28.097+01:00  INFO 12652 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2023-12-21T01:46:28.098+01:00  INFO 12652 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1b47b7f5]]
+2023-12-21T01:46:28.098+01:00  INFO 12652 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2023-12-21T01:46:28.105+01:00  INFO 12652 --- [main] com.rbs.cwe209.Cwe209Application         : Started Cwe209Application in 2.691 seconds (process running for 3.438)
+2023-12-21T01:46:31.762+01:00  INFO 12652 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-21T01:46:31.762+01:00  INFO 12652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-21T01:46:31.763+01:00  INFO 12652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-12-21T01:46:31.921+01:00  WARN 12652 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [114] milliseconds.
+2023-12-21T01:46:38.641+01:00  INFO 12652 --- [http-nio-8080-exec-10] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as admin/admin
+2023-12-21T01:47:28.072+01:00  INFO 12652 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2023-12-21T01:47:54.234+01:00  INFO 12652 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2023-12-21T01:47:54.234+01:00  INFO 12652 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1b47b7f5]]
+2023-12-21T01:47:54.234+01:00  INFO 12652 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2023-12-21T01:47:54.254+01:00  INFO 12652 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-21T01:47:54.256+01:00  INFO 12652 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-21T01:48:00.449+01:00  INFO 32940 --- [main] com.rbs.cwe209.Cwe209Application         : Starting Cwe209Application using Java 17.0.9 with PID 32940 (C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209\target\classes started by Dell in C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209)
+2023-12-21T01:48:00.451+01:00  INFO 32940 --- [main] com.rbs.cwe209.Cwe209Application         : No active profile set, falling back to 1 default profile: "default"
+2023-12-21T01:48:01.737+01:00  INFO 32940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-21T01:48:01.746+01:00  INFO 32940 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-21T01:48:01.747+01:00  INFO 32940 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-21T01:48:01.952+01:00  INFO 32940 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-21T01:48:01.957+01:00  INFO 32940 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-21T01:48:01.957+01:00  INFO 32940 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1449 ms
+2023-12-21T01:48:01.986+01:00  INFO 32940 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-21T01:48:02.170+01:00  INFO 32940 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cwe209 user=SA
+2023-12-21T01:48:02.172+01:00  INFO 32940 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-21T01:48:02.183+01:00  INFO 32940 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cwe209'
+2023-12-21T01:48:02.684+01:00  INFO 32940 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1693ff90, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47058864, org.springframework.security.web.context.SecurityContextHolderFilter@5175d9ad, org.springframework.security.web.header.HeaderWriterFilter@7dbae40, org.springframework.web.filter.CorsFilter@ad3f70a, org.springframework.security.web.csrf.CsrfFilter@6cc48a17, org.springframework.security.web.authentication.logout.LogoutFilter@154b8cb6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@35563e4c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25a5c8e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@656c5c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54ccb3, org.springframework.security.web.access.ExceptionTranslationFilter@73a845cb, org.springframework.security.web.access.intercept.AuthorizationFilter@743d0d44]
+2023-12-21T01:48:02.998+01:00  INFO 32940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-21T01:48:03.002+01:00  INFO 32940 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2023-12-21T01:48:03.003+01:00  INFO 32940 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5822ecda]]
+2023-12-21T01:48:03.003+01:00  INFO 32940 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2023-12-21T01:48:03.010+01:00  INFO 32940 --- [main] com.rbs.cwe209.Cwe209Application         : Started Cwe209Application in 3.136 seconds (process running for 3.896)
+2023-12-21T01:48:03.148+01:00  INFO 32940 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-21T01:48:03.149+01:00  INFO 32940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-21T01:48:03.150+01:00  INFO 32940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-21T01:48:03.333+01:00  WARN 32940 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [141] milliseconds.
+2023-12-21T01:48:11.373+01:00  INFO 32940 --- [http-nio-8080-exec-7] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as admin/admin
+2023-12-21T01:49:02.974+01:00  INFO 32940 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2023-12-21T01:52:08.940+01:00  INFO 32940 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2023-12-21T01:52:08.940+01:00  INFO 32940 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5822ecda]]
+2023-12-21T01:52:08.940+01:00  INFO 32940 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2023-12-21T01:52:08.965+01:00  INFO 32940 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-21T01:52:08.967+01:00  INFO 32940 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-21T01:52:14.226+01:00  INFO 25468 --- [main] com.rbs.cwe209.Cwe209Application         : Starting Cwe209Application using Java 17.0.9 with PID 25468 (C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209\target\classes started by Dell in C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209)
+2023-12-21T01:52:14.233+01:00  INFO 25468 --- [main] com.rbs.cwe209.Cwe209Application         : No active profile set, falling back to 1 default profile: "default"
+2023-12-21T01:52:15.358+01:00  INFO 25468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-21T01:52:15.376+01:00  INFO 25468 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-21T01:52:15.376+01:00  INFO 25468 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-21T01:52:15.526+01:00  INFO 25468 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-21T01:52:15.530+01:00  INFO 25468 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-21T01:52:15.531+01:00  INFO 25468 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1247 ms
+2023-12-21T01:52:15.558+01:00  INFO 25468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-21T01:52:15.733+01:00  INFO 25468 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cwe209 user=SA
+2023-12-21T01:52:15.735+01:00  INFO 25468 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-21T01:52:15.746+01:00  INFO 25468 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cwe209'
+2023-12-21T01:52:16.196+01:00  INFO 25468 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@76a9a009, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9785903, org.springframework.security.web.context.SecurityContextHolderFilter@191ec193, org.springframework.security.web.header.HeaderWriterFilter@7d50f2a8, org.springframework.web.filter.CorsFilter@34009349, org.springframework.security.web.csrf.CsrfFilter@7dbae40, org.springframework.security.web.authentication.logout.LogoutFilter@1693ff90, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@774d8276, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c7f9861, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a36c83a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f68a7f8, org.springframework.security.web.access.ExceptionTranslationFilter@66713605, org.springframework.security.web.access.intercept.AuthorizationFilter@2f4d32bf]
+2023-12-21T01:52:16.547+01:00  INFO 25468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-21T01:52:16.550+01:00  INFO 25468 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2023-12-21T01:52:16.552+01:00  INFO 25468 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@9f9146d]]
+2023-12-21T01:52:16.553+01:00  INFO 25468 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2023-12-21T01:52:16.569+01:00  INFO 25468 --- [main] com.rbs.cwe209.Cwe209Application         : Started Cwe209Application in 2.895 seconds (process running for 3.616)
+2023-12-21T01:52:16.778+01:00  INFO 25468 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-21T01:52:16.778+01:00  INFO 25468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-21T01:52:16.779+01:00  INFO 25468 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-21T01:52:16.984+01:00  WARN 25468 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [156] milliseconds.
+2023-12-21T01:52:28.454+01:00  INFO 25468 --- [http-nio-8080-exec-6] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as admin/admin
+2023-12-21T01:53:16.492+01:00  INFO 25468 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2023-12-21T01:54:13.929+01:00  INFO 25468 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2023-12-21T01:54:13.929+01:00  INFO 25468 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@9f9146d]]
+2023-12-21T01:54:13.929+01:00  INFO 25468 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2023-12-21T01:54:13.950+01:00  INFO 25468 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-21T01:54:13.952+01:00  INFO 25468 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-21T01:54:19.325+01:00  INFO 22424 --- [main] com.rbs.cwe209.Cwe209Application         : Starting Cwe209Application using Java 17.0.9 with PID 22424 (C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209\target\classes started by Dell in C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209)
+2023-12-21T01:54:19.328+01:00  INFO 22424 --- [main] com.rbs.cwe209.Cwe209Application         : No active profile set, falling back to 1 default profile: "default"
+2023-12-21T01:54:20.630+01:00  INFO 22424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-21T01:54:20.639+01:00  INFO 22424 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-21T01:54:20.640+01:00  INFO 22424 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-21T01:54:20.828+01:00  INFO 22424 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-21T01:54:20.833+01:00  INFO 22424 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-21T01:54:20.834+01:00  INFO 22424 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1447 ms
+2023-12-21T01:54:20.868+01:00  INFO 22424 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-21T01:54:21.065+01:00  INFO 22424 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cwe209 user=SA
+2023-12-21T01:54:21.068+01:00  INFO 22424 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-21T01:54:21.082+01:00  INFO 22424 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cwe209'
+2023-12-21T01:54:21.605+01:00  INFO 22424 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@222acad, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56cfe6be, org.springframework.security.web.context.SecurityContextHolderFilter@39449465, org.springframework.security.web.header.HeaderWriterFilter@1ea930eb, org.springframework.web.filter.CorsFilter@7f0d8eff, org.springframework.security.web.csrf.CsrfFilter@5329f6b3, org.springframework.security.web.authentication.logout.LogoutFilter@48f2054d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5866731, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16f7f59f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ee8051c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@149aa7b2, org.springframework.security.web.access.ExceptionTranslationFilter@1b7554d4, org.springframework.security.web.access.intercept.AuthorizationFilter@7f2b584b]
+2023-12-21T01:54:22.037+01:00  INFO 22424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-21T01:54:22.039+01:00  INFO 22424 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2023-12-21T01:54:22.040+01:00  INFO 22424 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@a9a8ec3]]
+2023-12-21T01:54:22.040+01:00  INFO 22424 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2023-12-21T01:54:22.048+01:00  INFO 22424 --- [main] com.rbs.cwe209.Cwe209Application         : Started Cwe209Application in 3.314 seconds (process running for 4.173)
+2023-12-21T01:54:23.566+01:00  INFO 22424 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-21T01:54:23.566+01:00  INFO 22424 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-21T01:54:23.567+01:00  INFO 22424 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-21T01:54:23.763+01:00  WARN 22424 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [140] milliseconds.
+2023-12-21T01:54:29.055+01:00  INFO 22424 --- [http-nio-8080-exec-5] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as admin/admin
+2023-12-21T01:54:29.089+01:00  WARN 22424 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-12-21T01:55:21.993+01:00  INFO 22424 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2023-12-21T01:55:41.053+01:00  INFO 22424 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2023-12-21T01:55:41.054+01:00  INFO 22424 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@a9a8ec3]]
+2023-12-21T01:55:41.054+01:00  INFO 22424 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2023-12-21T01:55:41.071+01:00  INFO 22424 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-21T01:55:41.073+01:00  INFO 22424 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-21T01:55:45.940+01:00  INFO 3156 --- [main] com.rbs.cwe209.Cwe209Application         : Starting Cwe209Application using Java 17.0.9 with PID 3156 (C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209\target\classes started by Dell in C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209)
+2023-12-21T01:55:45.942+01:00  INFO 3156 --- [main] com.rbs.cwe209.Cwe209Application         : No active profile set, falling back to 1 default profile: "default"
+2023-12-21T01:55:47.041+01:00  INFO 3156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-21T01:55:47.054+01:00  INFO 3156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-21T01:55:47.054+01:00  INFO 3156 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-21T01:55:47.235+01:00  INFO 3156 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-21T01:55:47.248+01:00  INFO 3156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-21T01:55:47.248+01:00  INFO 3156 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1255 ms
+2023-12-21T01:55:47.285+01:00  INFO 3156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-21T01:55:47.458+01:00  INFO 3156 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cwe209 user=SA
+2023-12-21T01:55:47.460+01:00  INFO 3156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-21T01:55:47.474+01:00  INFO 3156 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cwe209'
+2023-12-21T01:55:47.891+01:00  INFO 3156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2abc55c4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e958f08, org.springframework.security.web.context.SecurityContextHolderFilter@35563e4c, org.springframework.security.web.header.HeaderWriterFilter@53016b11, org.springframework.web.filter.CorsFilter@71c0b742, org.springframework.security.web.csrf.CsrfFilter@7d50f2a8, org.springframework.security.web.authentication.logout.LogoutFilter@76a9a009, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3ca3648, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ef86c72, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@123307c4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3bbb8c16, org.springframework.security.web.access.ExceptionTranslationFilter@4ee8051c, org.springframework.security.web.access.intercept.AuthorizationFilter@149aa7b2]
+2023-12-21T01:55:48.180+01:00  INFO 3156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-21T01:55:48.184+01:00  INFO 3156 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2023-12-21T01:55:48.185+01:00  INFO 3156 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1d6713dd]]
+2023-12-21T01:55:48.185+01:00  INFO 3156 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2023-12-21T01:55:48.192+01:00  INFO 3156 --- [main] com.rbs.cwe209.Cwe209Application         : Started Cwe209Application in 2.774 seconds (process running for 3.482)
+2023-12-21T01:55:48.589+01:00  INFO 3156 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-21T01:55:48.589+01:00  INFO 3156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-21T01:55:48.590+01:00  INFO 3156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-21T01:55:48.757+01:00  WARN 3156 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [120] milliseconds.
+2023-12-21T01:55:54.229+01:00  INFO 3156 --- [http-nio-8080-exec-2] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as admin/admin
+2023-12-21T01:56:48.154+01:00  INFO 3156 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2023-12-21T02:01:45.977+01:00  INFO 3156 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2023-12-21T02:01:45.978+01:00  INFO 3156 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1d6713dd]]
+2023-12-21T02:01:45.978+01:00  INFO 3156 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2023-12-21T02:01:45.996+01:00  INFO 3156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-21T02:01:45.998+01:00  INFO 3156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-21T02:01:50.565+01:00  INFO 23428 --- [main] com.rbs.cwe209.Cwe209Application         : Starting Cwe209Application using Java 17.0.9 with PID 23428 (C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209\target\classes started by Dell in C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209)
+2023-12-21T02:01:50.567+01:00  INFO 23428 --- [main] com.rbs.cwe209.Cwe209Application         : No active profile set, falling back to 1 default profile: "default"
+2023-12-21T02:01:51.639+01:00  INFO 23428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-21T02:01:51.647+01:00  INFO 23428 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-21T02:01:51.648+01:00  INFO 23428 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-21T02:01:51.806+01:00  INFO 23428 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-21T02:01:51.811+01:00  INFO 23428 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-21T02:01:51.812+01:00  INFO 23428 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1194 ms
+2023-12-21T02:01:51.838+01:00  INFO 23428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-21T02:01:52.011+01:00  INFO 23428 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cwe209 user=SA
+2023-12-21T02:01:52.012+01:00  INFO 23428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-21T02:01:52.023+01:00  INFO 23428 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cwe209'
+2023-12-21T02:01:52.434+01:00  INFO 23428 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@25ce435, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ea71fc2, org.springframework.security.web.context.SecurityContextHolderFilter@54ccb3, org.springframework.security.web.header.HeaderWriterFilter@1693ff90, org.springframework.web.filter.CorsFilter@19ad75e5, org.springframework.security.web.csrf.CsrfFilter@154b8cb6, org.springframework.security.web.authentication.logout.LogoutFilter@5866731, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3bbb8c16, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@621f23ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7761e342, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7cd5fcf4, org.springframework.security.web.access.ExceptionTranslationFilter@ef86c72, org.springframework.security.web.access.intercept.AuthorizationFilter@71c0b742]
+2023-12-21T02:01:52.765+01:00  INFO 23428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-21T02:01:52.767+01:00  INFO 23428 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2023-12-21T02:01:52.768+01:00  INFO 23428 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6ef1c3f7]]
+2023-12-21T02:01:52.769+01:00  INFO 23428 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2023-12-21T02:01:52.776+01:00  INFO 23428 --- [main] com.rbs.cwe209.Cwe209Application         : Started Cwe209Application in 2.708 seconds (process running for 3.405)
+2023-12-21T02:02:02.440+01:00  INFO 23428 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-21T02:02:02.440+01:00  INFO 23428 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-21T02:02:02.442+01:00  INFO 23428 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-12-21T02:02:02.612+01:00  WARN 23428 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [132] milliseconds.
+2023-12-21T02:02:07.644+01:00  INFO 23428 --- [http-nio-8080-exec-5] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as admin/admin
+2023-12-21T02:02:23.075+01:00 ERROR 23428 --- [http-nio-8080-exec-6] c.r.c.c.DatabaseAuthenticationProvider   : No data is available [2000-224]
+2023-12-21T02:02:52.738+01:00  INFO 23428 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2023-12-21T02:03:01.836+01:00 ERROR 23428 --- [http-nio-8080-exec-6] c.r.c.c.DatabaseAuthenticationProvider   : No data is available [2000-224]
+2023-12-21T02:05:18.852+01:00 ERROR 23428 --- [http-nio-8080-exec-10] c.r.c.c.DatabaseAuthenticationProvider   : No data is available [2000-224]
+2023-12-21T02:06:17.911+01:00  INFO 23428 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2023-12-21T02:06:17.912+01:00  INFO 23428 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6ef1c3f7]]
+2023-12-21T02:06:17.912+01:00  INFO 23428 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2023-12-21T02:06:17.931+01:00  INFO 23428 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-21T02:06:17.933+01:00  INFO 23428 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-21T02:06:25.035+01:00  INFO 16532 --- [main] com.rbs.cwe209.Cwe209Application         : Starting Cwe209Application using Java 17.0.9 with PID 16532 (C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209\target\classes started by Dell in C:\Users\Dell\Desktop\Master\RBS\Seminarski rad\cwe209)
+2023-12-21T02:06:25.039+01:00  INFO 16532 --- [main] com.rbs.cwe209.Cwe209Application         : No active profile set, falling back to 1 default profile: "default"
+2023-12-21T02:06:26.610+01:00  INFO 16532 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2023-12-21T02:06:26.622+01:00  INFO 16532 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-21T02:06:26.622+01:00  INFO 16532 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-21T02:06:26.899+01:00  INFO 16532 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-12-21T02:06:26.905+01:00  INFO 16532 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-21T02:06:26.906+01:00  INFO 16532 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1797 ms
+2023-12-21T02:06:26.944+01:00  INFO 16532 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-21T02:06:27.241+01:00  INFO 16532 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:cwe209 user=SA
+2023-12-21T02:06:27.243+01:00  INFO 16532 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-21T02:06:27.257+01:00  INFO 16532 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cwe209'
+2023-12-21T02:06:27.892+01:00  INFO 16532 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@222acad, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56cfe6be, org.springframework.security.web.context.SecurityContextHolderFilter@39449465, org.springframework.security.web.header.HeaderWriterFilter@1ea930eb, org.springframework.web.filter.CorsFilter@7f0d8eff, org.springframework.security.web.csrf.CsrfFilter@5329f6b3, org.springframework.security.web.authentication.logout.LogoutFilter@48f2054d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5866731, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16f7f59f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ee8051c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@149aa7b2, org.springframework.security.web.access.ExceptionTranslationFilter@1b7554d4, org.springframework.security.web.access.intercept.AuthorizationFilter@7f2b584b]
+2023-12-21T02:06:28.279+01:00  INFO 16532 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2023-12-21T02:06:28.283+01:00  INFO 16532 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2023-12-21T02:06:28.284+01:00  INFO 16532 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@a9a8ec3]]
+2023-12-21T02:06:28.284+01:00  INFO 16532 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2023-12-21T02:06:28.293+01:00  INFO 16532 --- [main] com.rbs.cwe209.Cwe209Application         : Started Cwe209Application in 3.863 seconds (process running for 4.744)
+2023-12-21T02:06:28.834+01:00  INFO 16532 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-21T02:06:28.834+01:00  INFO 16532 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-21T02:06:28.836+01:00  INFO 16532 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-21T02:06:29.046+01:00  WARN 16532 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [154] milliseconds.
+2023-12-21T02:06:34.987+01:00  INFO 16532 --- [http-nio-8080-exec-5] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as admin/admin
+2023-12-21T02:06:49.713+01:00 ERROR 16532 --- [http-nio-8080-exec-5] c.r.c.c.DatabaseAuthenticationProvider   : No data is available [2000-224]
+2023-12-21T02:07:28.238+01:00  INFO 16532 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2023-12-21T02:09:50.354+01:00  INFO 16532 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2023-12-21T02:09:50.355+01:00  INFO 16532 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@a9a8ec3]]
+2023-12-21T02:09:50.355+01:00  INFO 16532 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2023-12-21T02:09:50.374+01:00  INFO 16532 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-21T02:09:50.377+01:00  INFO 16532 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

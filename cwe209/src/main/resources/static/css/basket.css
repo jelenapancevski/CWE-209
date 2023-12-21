@@ -1,11 +1,11 @@
 .container-fluid {
-    //background-image: url("../backgrounds/basketbackground.jpg");
+    background-image: url("../backgrounds/basketbackground.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
     overflow: auto;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     margin: 0%;
 }
@@ -20,13 +20,7 @@
     padding-bottom:2.5% ;
 }
 
-.container-fluid{
-    margin-top: 2.5ch;
-    margin-bottom: 2.5%;
-    background-color: white;
-    padding: 20px;
-    color:black;
-}
+
 .userdata{
 
     font-family: "Annie"!important;
@@ -93,12 +87,6 @@ mat-form-field {
 
 }
 
-.mat-flat-button {
-    background-color:#2D9C88;
-    font-family: 'Atma';
-    font-size: 20px;
-    color:white;
-}
 
 #logo{
     width: 50px;
@@ -117,4 +105,91 @@ text-align:center;
 .sameWidthTable th, td{
   font-size: 22px;
   width: 33.33%;
+}
+
+.ordertext{
+    margin-top: 2.5ch;
+    margin-bottom: 2.5%;
+    background-color: white;
+    padding: 20px;
+    color:black;
+
+}
+.userdata{
+
+    font-family: "Annie"!important;
+    font-size: 26px !important;
+    line-height: 1.3;
+}
+.right-align{
+    text-align: right;
+}
+#userinfo{
+    display: flex;
+    justify-content: space-around;
+}
+
+.producttext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto!important;
+}
+mat-icon {
+    transform: scale(1.5);
+    color:#9C2D41;
+}
+
+.image{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+h2 {
+    font-family: "Annie"!important;
+    font-size: 26px !important;
+}
+
+mat-form-field {
+    display: block !important;
+}
+
+
+
+.producttext {
+    font-size: 26px;
+    font-family: 'Annie' !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto!important;
+}
+
+.productheader {
+    font-size: 26px;
+    font-family: 'Annie' !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1%;
+}
+
+
+#orderprice {
+    font-size: 28px;
+    font-family: 'Annie' !important;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+
+}
+
+.mat-flat-button {
+    background-color:#2D9C88;
+    font-family: 'Atma';
+    font-size: 20px;
+    color:white;
 }

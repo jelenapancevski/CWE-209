@@ -6,7 +6,6 @@ import com.rbs.cwe209.model.Product;
 import com.rbs.cwe209.repository.CouponRepository;
 import com.rbs.cwe209.repository.ProductRepository;
 import jakarta.servlet.http.HttpSession;
-import org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -89,12 +88,12 @@ public class ProductsController {
             Order o = new Order("test");
             //treba dohvatiti ime trenutnog ulogovanog,
             // mada nam mozda ovo i ne treba ako necemo cuvati narudzbine u bazi
-            o.addItem(productName, amount, price);
+            o.addProduct(productName, amount, price);
             session.setAttribute("order", o);
         }
         else{
             Order o =  (Order) session.getAttribute("order");
-            o.addItem(productName, amount, price);
+            o.addProduct(productName, amount, price);
             session.setAttribute("order", o);
         }
         return "redirect:/products";
