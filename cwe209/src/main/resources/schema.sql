@@ -1,5 +1,7 @@
 drop table if exists users;
 drop table if exists products;
+drop table if exists promocodes;
+
 create table users
 (
     id       int          NOT NULL AUTO_INCREMENT,

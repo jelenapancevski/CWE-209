@@ -3,7 +3,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rbs.cwe209.model.Order;
 import com.rbs.cwe209.model.Product;
-import com.rbs.cwe209.repository.CouponRepository;
+//import com.rbs.cwe209.repository.CouponRepository;
 import com.rbs.cwe209.repository.ProductRepository;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
@@ -15,12 +15,12 @@ import java.util.List;
 @Controller
 public class ProductsController {
 
-    public ProductsController(ProductRepository productRepository, CouponRepository couponRepository) {
-        this.couponRepository = couponRepository;
+    public ProductsController(ProductRepository productRepository) {
+//        this.couponRepository = couponRepository;
         this.productRepository = productRepository;
     }
     ProductRepository productRepository;
-    CouponRepository couponRepository;
+//    CouponRepository couponRepository;
     @GetMapping("/products")
     public String getProducts(Model model) {
 
@@ -99,17 +99,17 @@ public class ProductsController {
         return "redirect:/products";
     }
 
-    @PostMapping("/applyCoupon")
-    public String applyCoupon(@RequestParam(name = "couponCode", defaultValue = "") String couponCode
-            , HttpSession session){
-        int discount = couponRepository.getCouponDiscount(couponCode);
-        if(discount == -1){
-            //greska
-            return"redirect:/basket?badCoupon=true";
-        }
-        else{
-            //dobar jetreba smanjiti cenu ukupnu
-            return"redirect:/basket";
-        }
-    }
+//    @PostMapping("/applyCoupon")
+//    public String applyCoupon(@RequestParam(name = "couponCode", defaultValue = "") String couponCode
+//            , HttpSession session){
+//        int discount = couponRepository.getCouponDiscount(couponCode);
+//        if(discount == -1){
+//            //greska
+//            return"redirect:/basket?badCoupon=true";
+//        }
+//        else{
+//            //dobar jetreba smanjiti cenu ukupnu
+//            return"redirect:/basket";
+//        }
+//    }
 }

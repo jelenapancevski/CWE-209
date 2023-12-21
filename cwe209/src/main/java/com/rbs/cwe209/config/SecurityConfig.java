@@ -17,7 +17,7 @@ public class SecurityConfig {
                         .requestMatchers("/logs").hasRole("ADMIN")
                         .requestMatchers("/","/home","/products","/product/{id}","/createServerSessionOrder","/sendOrder","/basket",
                                 "/searchForm","/searchResults","/promocode").hasRole("USER")
-                        .requestMatchers("/resources/**").permitAll().anyRequest().permitAll()
+                        .requestMatchers("/resources/**", "/h2-console/**").permitAll().anyRequest().permitAll()
 
                 )
                 .formLogin((form) -> form

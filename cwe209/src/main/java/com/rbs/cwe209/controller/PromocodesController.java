@@ -5,6 +5,7 @@ import com.rbs.cwe209.model.Promocode;
 import com.rbs.cwe209.repository.ProductRepository;
 import com.rbs.cwe209.repository.PromocodeRepository;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -23,14 +24,19 @@ public class PromocodesController {
     }
 
     @PostMapping("/promocode")
-    public String getPromocode(@RequestParam(name="couponCode") String promoCode, Model model) {
+    public String getPromocode(@RequestParam(name="couponCode") String promoCode, HttpSession session) {
         Promocode promocode = promocodeRepository.findPromocode(promoCode);
+        boolean hello = promocode==null;
+        System.out.println("da li je null " + hello);
         System.out.println(promoCode);
         if(promocode!=null){
-            model.addAttribute("promocode",promocode);
+            session.setAttribute("promocodeSet",promocode);
+            session.removeAttribute("errorMessage");
+
         }
         else {
-            model.addAttribute("errorMessage", "Promocode doesn't exist");
+            session.removeAttribute("promocodeSet");
+            session.setAttribute("errorMessage", "Promocode doesn't exist");
         }
         return "redirect:/basket";
     }
