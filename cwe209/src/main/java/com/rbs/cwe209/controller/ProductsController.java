@@ -4,9 +4,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rbs.cwe209.model.Order;
 import com.rbs.cwe209.model.Product;
 //import com.rbs.cwe209.repository.CouponRepository;
+import com.rbs.cwe209.model.Promocode;
+import com.rbs.cwe209.model.User;
 import com.rbs.cwe209.repository.ProductRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -60,32 +64,25 @@ public class ProductsController {
                               @RequestParam(name="price", defaultValue = "") int price, HttpSession session,HttpServletRequest request){
 
         if (session.getAttribute("order") == null) {
-            Order o = new Order("test");
-            //treba dohvatiti ime trenutnog ulogovanog,
-            // mada nam mozda ovo i ne treba ako necemo cuvati narudzbine u bazi
+            UsernamePasswordAuthenticationToken authentication = (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
+            User user = (User) authentication.getPrincipal();
+            Order o = new Order(user.getUsername());
             o.addProduct(productName, amount, price);
             session.setAttribute("order", o);
         }
         else{
             Order o =  (Order) session.getAttribute("order");
             o.addProduct(productName, amount, price);
+            Promocode promocode= (Promocode) session.getAttribute("promocodeSet");
+            if(promocode!=null){
+                o.setTotalPrice((int)((o.getTotalPrice()*(100-promocode.getPercent()))/100));
+            }
             session.setAttribute("order", o);
         }
+        session.setAttribute("message","Product successfully added to the basket");
         String referer = request.getHeader("Referer");
         return "redirect:"+ referer;
     }
 
-//    @PostMapping("/applyCoupon")
-//    public String applyCoupon(@RequestParam(name = "couponCode", defaultValue = "") String couponCode
-//            , HttpSession session){
-//        int discount = couponRepository.getCouponDiscount(couponCode);
-//        if(discount == -1){
-//            //greska
-//            return"redirect:/basket?badCoupon=true";
-//        }
-//        else{
-//            //dobar jetreba smanjiti cenu ukupnu
-//            return"redirect:/basket";
-//        }
-//    }
+
 }

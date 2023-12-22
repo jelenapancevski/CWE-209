@@ -1,6 +1,7 @@
 package com.rbs.cwe209.controller;
 
 import com.rbs.cwe209.config.DatabaseAuthenticationProvider;
+import com.rbs.cwe209.model.Order;
 import com.rbs.cwe209.model.Promocode;
 import com.rbs.cwe209.repository.ProductRepository;
 import com.rbs.cwe209.repository.PromocodeRepository;
@@ -27,15 +28,19 @@ public class PromocodesController {
     @PostMapping("/promocode")
     public String getPromocode(@RequestParam(name="couponCode") String promoCode, HttpServletRequest request) {
         Promocode promocode = promocodeRepository.findPromocode(promoCode);
+        Order order = (Order) request.getSession().getAttribute("order");
         if(promocode!=null){
            request.getSession().setAttribute("promocodeSet",promocode);
             request.getSession().removeAttribute("errorMessage");
-
+           order.calculateTotalPrice();
+           order.setTotalPrice((int)((order.getTotalPrice()*(100-promocode.getPercent()))/100));
         }
         else {
             request.getSession().removeAttribute("promocodeSet");
             request.getSession().setAttribute("errorMessage", "Promocode doesn't exist");
+            order.calculateTotalPrice();
         }
+        request.getSession().setAttribute("order",order);
 
         String referer = request.getHeader("Referer");
         return "redirect:"+ referer;

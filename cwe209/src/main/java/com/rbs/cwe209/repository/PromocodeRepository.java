@@ -12,7 +12,7 @@ import java.sql.*;
 
 @Repository
 public class PromocodeRepository {
-    private static final Logger LOG = LoggerFactory.getLogger(DatabaseAuthenticationProvider.class);
+    private static final Logger LOG = LoggerFactory.getLogger(PromocodeRepository.class);
     private final DataSource dataSource;
 
 
@@ -22,9 +22,8 @@ public class PromocodeRepository {
 
     private Promocode createPromocode(ResultSet rs) throws SQLException {
         Long id = rs.getLong(1);
-        String name = rs.getString(2);
-        int discount = rs.getInt(3);
-
+       String name = rs.getString(2);
+       int discount = rs.getInt(3);
 
         return new Promocode(id, name,discount);
     }
@@ -34,12 +33,11 @@ public class PromocodeRepository {
         try (Connection connection = dataSource.getConnection();
              Statement statement = connection.createStatement();
              ResultSet rs = statement.executeQuery(query)) {
-            if(rs.next()){
-                return  createPromocode(rs);
-            }
+             rs.next();
+             Promocode promocode = createPromocode(rs);
+             return promocode;
         } catch (SQLException e) {
-            //e.printStackTrace();
-            LOG.error(e.getMessage());
+            LOG.error(e.getMessage()+ " BAD QUERY: "+query+"; NO RESULTS FOUND");
         }
         return null;
     }

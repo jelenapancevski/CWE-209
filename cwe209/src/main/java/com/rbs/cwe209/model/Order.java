@@ -61,11 +61,15 @@ public class Order {
         return products;
     }
 
-    private void calculateTotalPrice(){
+    public void calculateTotalPrice(){
         totalPrice = 0;
         for(CakeInfo ci : products.values()){
             totalPrice+= ci.amount*ci.price;
         }
+    }
+
+    public void setTotalPrice(int i) {
+        totalPrice=i;
     }
 
     private class CakeInfo {

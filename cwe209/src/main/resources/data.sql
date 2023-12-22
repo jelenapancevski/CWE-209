@@ -102,5 +102,6 @@ values (1,
 
 insert into promocodes(id, name, discount)
 values (1, '24ForNew2024', 24),
-        (2, 'Store15', 15);
+        (2, 'Store15', 15),
+        (3, 'AWESOMEFLAG' ,100);
 

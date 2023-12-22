@@ -109,6 +109,9 @@
                                                     <button type="submit" class="btn btn-primary" id="orderbutton">Add to basket</button>
                                                 </td>
                                             </tr>
+                                            <tr th:if="${session.message}">
+                                                <td th:text=" ${session.message}"> </td>
+                                            </tr>
                                         </table>
                                         <input type="text" th:value="${product.name}" id="productName" name="productName" hidden></input>
                                         <input type="text" th:value="${product.price}" name="price" hidden></input>
