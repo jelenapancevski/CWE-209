@@ -21,36 +21,25 @@ public class PromocodeRepository {
     }
 
     private Promocode createPromocode(ResultSet rs) throws SQLException {
-        int numColumns = rs.getMetaData().getColumnCount();
-        Long id = 0L;
-        String name = "";
-        int discount = 0;
-        while (rs.next()) {
-            id = rs.getLong("id");
-            name = rs.getString("name");
-            discount = rs.getInt("discount");
-        }
-        Promocode retPromo = null;
-        if(id!= 0){
-            retPromo = new Promocode(id, name, discount);
-        }
-        return retPromo;
+        Long id = rs.getLong(1);
+        String name = rs.getString(2);
+        int discount = rs.getInt(3);
+
+
+        return new Promocode(id, name,discount);
     }
 
     public Promocode findPromocode(String name) {
-        String test = "SELECT * FROM promocodes WHERE name='" + name + "'";
-        String query = "SELECT * FROM promocodes WHERE name ='" + name + "'";
+        String query = "SELECT * FROM promocodes WHERE name='"+name+"'";
         try (Connection connection = dataSource.getConnection();
              Statement statement = connection.createStatement();
              ResultSet rs = statement.executeQuery(query)) {
-            return createPromocode(rs);
-
+            if(rs.next()){
+                return  createPromocode(rs);
+            }
         } catch (SQLException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             LOG.error(e.getMessage());
-
-            LOG.error(e.getSQLState());
-            System.out.println("ULAZI");
         }
         return null;
     }
