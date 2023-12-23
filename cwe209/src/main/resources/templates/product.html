@@ -175,7 +175,7 @@
         </div>
     </div>
     <div th:if="${product == null}">
-        <h2>No products found</h2>
+        <h2 th:text="${errorMessage}"></h2>
     </div>
 
 

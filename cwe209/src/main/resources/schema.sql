@@ -23,6 +23,7 @@ create table products
     producttype varchar(255) not null,
     price int not null,
     image varchar(255) not null,
+    secret varchar (255) not null,
     PRIMARY KEY (ID)
 
 );

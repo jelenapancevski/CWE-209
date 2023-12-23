@@ -17,6 +17,16 @@ public class Product {
     private int price;
     private String image;
 
+    public String getSecret() {
+        return secret;
+    }
+
+    public void setSecret(String secret) {
+        this.secret = secret;
+    }
+
+    private String secret;
+
 
     public void set_id(Long _id) {
         this._id = _id;
@@ -75,7 +85,7 @@ public class Product {
         this.image = image;
     }
 
-    public Product(Long id, List<String> ingredients, String name, String description, String producttype, int price, String image) {
+    public Product(Long id, List<String> ingredients, String name, String description, String producttype, int price, String image,String secret) {
         this._id = id;
         this.ingredients = ingredients;
         this.name = name;
@@ -83,5 +93,6 @@ public class Product {
         this.producttype = producttype;
         this.price = price;
         this.image = image;
+        this.secret = secret;
     }
 }

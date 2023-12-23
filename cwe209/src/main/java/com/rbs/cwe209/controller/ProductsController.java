@@ -21,11 +21,11 @@ import java.util.List;
 public class ProductsController {
 
     public ProductsController(ProductRepository productRepository) {
-//        this.couponRepository = couponRepository;
+
         this.productRepository = productRepository;
     }
     ProductRepository productRepository;
-//    CouponRepository couponRepository;
+
     @GetMapping("/products")
     public String getProducts(Model model) {
 
@@ -37,6 +37,9 @@ public class ProductsController {
     public String getProducts(Model model,@PathVariable Long id) {
 
         Product product = productRepository.getProduct(id);
+        if(product==null){
+            model.addAttribute("errorMessage","No product with id = "+id);
+        }
         model.addAttribute("product",product);
         return "product";
     }

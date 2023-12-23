@@ -55,20 +55,24 @@ public class ProductRepository  {
         String producttype = rs.getString(5);
         int price = rs.getInt(6);
         String image = rs.getString(7);
-        return new Product(id, ingredients,name,description,producttype,price,image);
+        String secret = rs.getString(8);
+        return new Product(id, ingredients,name,description,producttype,price,image,secret);
     }
 
 
     public Product getProduct(Long id) {
-        String sqlQuery = "SELECT * FROM " + table+" WHERE id="+id;
+        String sqlQuery = "SELECT id,ingredients,name, description,producttype,price,image,secret FROM " + table+" WHERE id="+id;
         try (Connection connection = dataSource.getConnection();
              Statement statement = connection.createStatement();
              ResultSet rs = statement.executeQuery(sqlQuery)) {
-            if (rs.next()) {
-                return (createProduct(rs));
-            }
+              rs.next();
+              return (createProduct(rs));
+
         } catch (SQLException e) {
             e.printStackTrace();
+            LOG.error(e.getSQLState());
+            LOG.error(e.getMessage());
+            LOG.error("QUERY: "+ sqlQuery);
         }
         return null;
     }
