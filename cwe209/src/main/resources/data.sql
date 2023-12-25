@@ -117,3 +117,16 @@ values (1, '24ForNew2024', 24),
         (2, 'Store15', 15),
         (3, 'AWESOMEFLAG' ,100);
 
+insert into promotions(id, name, description, image)
+values(1,
+ 'Cookie Day Celebration!',
+'On the occasion of the international cookie day on December 15th, the Sweet Bites pastry shop will treat its customers to a cookie of their choice. We await you at our well-known location to celebrate this day together!',
+'jpg'),
+(2,
+ 'Coffee Time!',
+'To kick off the holiday atmosphere, Sweet Bites pastry shop has decided to gift every customer one of our cakes with a cappuccino at a promotional price of 100 dinars. The promotion is valid every working day from 09:00 to 12:00. See you there!',
+'jpg'),
+(3,
+ 'Cookies for the little ones!',
+'With every purchase of any of our products, the youngest family members receive a free cookie of their choice. The promotion is valid every working day until the end of the year. See you there!',
+'jpg');

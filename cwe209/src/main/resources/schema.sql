@@ -34,3 +34,11 @@ create table promocodes
     name VARCHAR(255) not NULL,
     discount int not NULL
 );
+
+create table promotions
+(
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255) not NULL,
+    description varchar(1000) not NULL,
+    image varchar(255) not NULL
+);
