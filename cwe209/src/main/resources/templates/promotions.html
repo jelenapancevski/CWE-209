@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Promotions</title>
-  <link rel="stylesheet" th:href="@{/css/pomotions.css}" >
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script  defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" th:href="@{/css/promotions.css}" >
+  <script th:inline="javascript">
+    /*<![CDATA[*/
+    function promotion(promotionId) {
+      window.location.href = '/promotion/' + promotionId;
+    }
+    /*]]>*/
+  </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary" >
-  <a class="navbar-brand" th:href="@{/home}">Delicious corner <img th:src="@{/backgrounds/logo.png}" alt="" id="logo" style=" width: 50px;height: 70px;"></a>
+
+  <a class="navbar-brand" th:href="@{/home}"> Delicious corner <img th:src="@{/backgrounds/logo.png}" alt="" id="logo"></a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -27,15 +37,14 @@
       <li class="nav-item">
         <a class="nav-link" th:href="@{/searchByIngredient}">Search by ingredients</a>
       </li>
-      <li class="nav-item" >
-        <form th:action="@{/logout}" method="post" >
+      <li class="nav-item">
+        <form th:action="@{/logout}" method="post">
           <input type="submit" value="Sign Out" class="btn btn-primary" />
         </form>
       </li>
 
     </ul>
   </div>
-
 </nav>
 <div class="container-fluid" >
 
@@ -48,18 +57,18 @@
   <div class="row sameheight" th:each="promotion : ${promotions}">
     <div class="offset-lg-3 col-lg-6 cold-md-4 col-sm-6 info-sameheight" >
 
-      <mat-card >
-        <mat-card-header>
-          <mat-card-title th:text="${promotion.name}"> </mat-card-title>
-        </mat-card-header>
+      <div class="mat-card card">
+        <div class="mat-card-header card-header">
+          <div th:text="${promotion.name}" class="mat-card-title card-title" th:onclick="'promotion(\'' + ${promotion._id} + '\')'"> </div>
+        </div>
 
-        <mat-card-content>
-          <img mat-card-image th:src="@{'/promotions/' + ${promotion._id} + '.' + ${promotion.image}}">
-        </mat-card-content>
+        <div class="mat-card-content card-content" >
+          <img mat-card-image class="mat-card-image" th:src="@{'/promotions/' + ${promotion._id} + '.' + ${promotion.image}}" th:onclick="'promotion(\'' + ${promotion._id} + '\')'">
+        </div>
 <!--        <mat-card-actions >-->
 <!--          {{promotion.description}}-->
 <!--        </mat-card-actions>-->
-      </mat-card>
+      </div>
 
     </div>
   </div>
