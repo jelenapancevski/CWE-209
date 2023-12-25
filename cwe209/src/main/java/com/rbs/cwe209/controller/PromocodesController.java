@@ -37,7 +37,7 @@ public class PromocodesController {
         }
         else {
             request.getSession().removeAttribute("promocodeSet");
-            request.getSession().setAttribute("errorMessage", "Promocode doesn't exist");
+            request.getSession().setAttribute("errorMessage", "Promocode "+ promoCode + " doesn't exist");
             order.calculateTotalPrice();
         }
         request.getSession().setAttribute("order",order);

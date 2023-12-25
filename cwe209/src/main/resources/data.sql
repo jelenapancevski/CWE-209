@@ -1,8 +1,8 @@
 insert into users(id, username, password, usertype, firstname, lastname, address)
-values (1, 'bruce', 'wayne', 'user', 'Bruce','Wayne','NY'),
-       (2, 'peter', 'security_rules', 'user', 'Peter','Pan', 'Neverland'),
-       (3, 'tom', 'guessmeifyoucan', 'user', 'Tom','Riddle','Bulgaria'),
-       (4, 'admin', 'admin', 'admin','Petar','Nikolic','Novi Beograd 52');
+values (1, 'marijapetrovic', 'donutsrule23', 'user', 'Marija','Petrovic','Balkanska 53'),
+       (2, 'marko98', 'Password123#', 'user', 'Marko','Aleksic', 'Brace Jerkovic 23'),
+       (3, 'natalijaa', 'ilovesweets', 'user', 'Natalija','Peric','Hilandarska 72'),
+       (4, 'admin', 'Qwerty123#', 'admin','Petar','Nikolic','Nehruova 52');
 
 
 insert into products(id, ingredients, name, description, producttype, price, image,secret)
