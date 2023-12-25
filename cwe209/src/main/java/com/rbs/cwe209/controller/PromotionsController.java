@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.sql.SQLException;
 import java.util.List;
 
 @Controller
@@ -26,7 +27,7 @@ public class PromotionsController {
         return "promotions";
     }
     @GetMapping("/promotion/{id}")
-    public String getPromotion(Model model,@PathVariable Long id) {
+    public String getPromotion(Model model,@PathVariable Long id) /*throws SQLException*/ {
 
         Promotion promotion = promotionRepository.getPromotion(id);
         if(promotion==null){

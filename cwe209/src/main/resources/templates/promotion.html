@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
     <title>Promotion</title>
@@ -49,40 +49,41 @@
     </ul>
   </div>
 </nav>
-<div class="container-fluid cream" th:if="${promotion != null}">
+<!--th:if="${promotion != null}" -->
+<div class="container-fluid cream" >
 
-  <div class="row">
-    <div class="col" id="title" th:text="${promotion.name}"></div>
+  <div class="row" th:if="${promotion}">
+    <div class="col" id="title"   th:text="${promotion.name}" ></div>
   </div>
 
   <div class="row">
-    <div class="col-lg-4 col-md-6 col-sm-6 picture">
+    <div class=" offset-lg-3 col-lg-6 col-md-6 col-sm-6 picture">
 
       <div class="card" id="picture">
-        <div class="card-header">
-          &nbsp;
-        </div>
 
         <div class="card-content">
-          <img class="card-image" th:src="@{'/promotions/' + ${promotion._id} + '.' + ${promotion.image}}"/>
+          <img class="card-image" th:src="@{'/promotions/' + ${promotion._id} + '.' + ${promotion.image}}" th:onerror="'No data'"/>
         </div>
         <div class="card-actions">
         </div>
       </div>
 
     </div>
-    <div class="col-lg-8 col-md-6 col-sm-6">
-      <div class="row">
-        <div class="col" >
-          <div id="description" th:text="${promotion.description}"></div>
-        </div>
-      </div>
+
 
     </div>
+  <div class="row" th:if="${promotion}">
+    <div class=" offset-lg-3 col-lg-8 col-md-6 col-sm-6">
+      <div class="row">
+        <div class="col" >
+          <h3 id="description" th:text="${promotion.description}"></h3>
+        </div>
+      </div>
   </div>
 </div>
+</div>
 <div th:if="${promotion == null}">
-  <h2 th:text="${errorMessage}"></h2>
+  <h2 th:text="${error}"></h2>
 </div>
 
 

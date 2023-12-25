@@ -36,18 +36,19 @@ public class PromotionRepository {
         String image = rs.getString(4);
         return new Promotion(id, name,description,image);
     }
-    public Promotion getPromotion(Long id) {
+    public Promotion getPromotion(Long id) /*throws SQLException*/{
         String sqlQuery = "SELECT * FROM promotions WHERE id="+id;
         try (Connection connection = dataSource.getConnection();
              Statement statement = connection.createStatement();
              ResultSet rs = statement.executeQuery(sqlQuery)) {
             rs.next();
             return (createPromotion(rs));
+        }
+            catch(SQLException e){
 
-        } catch (SQLException e) {
-            e.printStackTrace();
+            }
+           return null;
 
         }
-        return null;
-    }
+
 }
