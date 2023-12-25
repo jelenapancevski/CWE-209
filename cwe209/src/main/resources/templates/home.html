@@ -20,17 +20,24 @@
             <ul class="navbar-nav" id="menu">
 
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/products}">Products</a>
+                    <a class="nav-link" th:href="@{/products}" th:if="${#authentication.getPrincipal()?.usertype=='user'}">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/promotions}">Promotions</a>
+                    <a class="nav-link" th:href="@{/promotions}" th:if="${#authentication.getPrincipal()?.usertype=='user'}">Promotions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/basket}">Basket</a>
+                    <a class="nav-link" th:href="@{/basket}" th:if="${#authentication.getPrincipal()?.usertype=='user'}">Basket</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/searchByIngredient}">Search by ingredients</a>
+                    <a class="nav-link" th:href="@{/searchByIngredient}" th:if="${#authentication.getPrincipal()?.usertype=='user'}">Search by ingredients</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/users}" th:if="${#authentication.getPrincipal()?.usertype=='admin'}">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/orders}" th:if="${#authentication.getPrincipal()?.usertype=='admin'}">Orders</a>
+                </li>
+
                 <li class="nav-item" >
                     <form th:action="@{/logout}" method="post" >
                         <input type="submit" value="Sign Out" class="btn btn-primary" />

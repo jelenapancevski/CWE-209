@@ -56,7 +56,7 @@ public class DatabaseAuthenticationProvider implements AuthenticationProvider {
                     role = "ROLE_ADMIN";
             }
             * */
-            authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+           else authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
             User user = userRepository.findUser(username);
             return new UsernamePasswordAuthenticationToken(user, password, authorities);
            // return new UsernamePasswordAuthenticationToken(username, password, authorities);

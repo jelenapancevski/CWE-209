@@ -69,4 +69,19 @@ public class UserRepository {
         return null;
     }
 
+    public List<User> getUsers() {
+        List<User>users = new ArrayList<>();
+        String query = "SELECT * FROM users WHERE usertype='user'";
+        try (Connection connection = dataSource.getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet rs = statement.executeQuery(query)) {
+
+           while(rs.next()){
+               users.add(createUser(rs));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return users;
+    }
 }
