@@ -62,7 +62,7 @@
       <div class="card" id="picture">
 
         <div class="card-content">
-          <img class="card-image" th:src="@{'/promotions/' + ${promotion._id} + '.' + ${promotion.image}}" th:onerror="'No data'"/>
+          <img class="card-image" th:src="@{'/promotions/'+${promotion._id}+'.'+${promotion.image}}" alt="/promotions/secret/flag.jpg"/>
         </div>
         <div class="card-actions">
         </div>
