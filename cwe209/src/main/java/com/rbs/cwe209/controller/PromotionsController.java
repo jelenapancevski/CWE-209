@@ -39,22 +39,18 @@ public class PromotionsController {
         try {
             // Load the folder as a resource
             org.springframework.core.io.Resource folderResource = resourceLoader.getResource(folderPath);
-            if (folderResource.exists()) System.out.println("postoji");
             // Get a list of files in the folder
             File[] files = folderResource.getFile().listFiles();
             List <String> filepaths = new ArrayList<>();
             for (int i=0;i<files.length;i++){
                 filepaths.add(files[i].getPath());
             }
-
             // Add the list of files to the model
             model.addAttribute("files", filepaths);
         }
         catch(IOException e){
 
         }
-
-
 
         Promotion promotion = promotionRepository.getPromotion(id);
         if(promotion==null){
