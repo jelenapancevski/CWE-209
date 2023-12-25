@@ -49,8 +49,8 @@
     </ul>
   </div>
 </nav>
-<!--th:if="${promotion != null}" -->
-<div class="container-fluid cream" >
+<!--}" -->
+<div class="container-fluid cream" th:if="${promotion != null}" >
 
   <div class="row" th:if="${promotion}">
     <div class="col" id="title"   th:text="${promotion.name}" ></div>
@@ -83,7 +83,13 @@
 </div>
 </div>
 <div th:if="${promotion == null}">
-  <h2 th:text="${error}"></h2>
+  <h2 th:text="${errorMessage}"></h2>
+  Existing files:
+  <ul>
+    <li th:each="file : ${files}">
+      <span th:text="${file}"></span>
+    </li>
+  </ul>
 </div>
 
 
