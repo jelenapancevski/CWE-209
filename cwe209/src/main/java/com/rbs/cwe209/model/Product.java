@@ -17,6 +17,7 @@ public class Product {
     private int price;
     private String image;
 
+
     public String getSecret() {
         return secret;
     }

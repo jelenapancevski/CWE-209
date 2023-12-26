@@ -5,7 +5,7 @@ values (1, 'marijapetrovic', 'donutsrule23', 'user', 'Marija','Petrovic','Balkan
        (4, 'admin', 'Qwerty123#', 'admin','Petar','Nikolic','Nehruova 52');
 
 
-insert into products(id, ingredients, name, description, producttype, price, image,secret)
+insert into products(id, ingredients, name, description, producttype, price, image,secret, stock)
 values (1,
         'flour, sugar, cocoa, vanilla extract, eggs, sweet cream, butter, chocolate',
         'Chocolate Delight',
@@ -13,7 +13,8 @@ values (1,
         'cake',
         2700,
         'jpeg',
-        'F1'),
+        'F1',
+        6),
         (2,
         'flour, sugar, cocoa, butter, eggs, cherry liqueur, cherries, dark chocolate, sweet cream',
         'Black Forest',
@@ -21,7 +22,8 @@ values (1,
         'cake',
         2500,
         'jpeg',
-        'L2'),
+        'L2',
+         20),
         (3,
                 'butter, eggs, sugar, flour, pistachios, orange juice, berries, lemon juice, vanilla extract, mascarpone cheese',
                 'Mascarpone Cake',
@@ -29,7 +31,8 @@ values (1,
                 'cake',
                 2700,
                 'jpeg',
-                'A3'),
+                'A3',
+         10),
                 (4,
                 'flour, sugar, Dutch cocoa, eggs, vanilla extract,butter, pistachios, dark chocolate, sweet cream',
                 'Chocolate Pistachio',
@@ -37,7 +40,8 @@ values (1,
                 'cake',
                 3000,
                 'jpeg',
-                'G4'
+                'G4',
+                 10
                 ),
                 (5,
                 'cookie crumbs, butter, sugar, cake flour, eggs, sour cream, lime juice, sweet cream, salt, lime zest,vanilla paste',
@@ -46,7 +50,8 @@ values (1,
                 'cake',
                 2650,
                 'jpeg',
-                 'C5'
+                 'C5',
+                 10
                 ),
                 (6,
                 'flour, sugar, cocoa, raspberries, eggs, sweet cream, butter, dark chocolate, milk chocolate',
@@ -55,7 +60,8 @@ values (1,
                 'cake',
                 3000,
                 'jpeg',
-                 'I6'
+                 'I6',
+                 5
                 ),
                 (7,
                 'flour, cocoa, sugar, Greek yogurt, eggs, milk, vanilla extract, butter, chocolate',
@@ -64,7 +70,8 @@ values (1,
                 'pastry',
                 300,
                 'jpeg',
-                 'N7'
+                 'N7',
+                 2
                 ),
                 (8,
                 'dark chocolate, butter, eggs, sugar, flour',
@@ -73,7 +80,8 @@ values (1,
                 'pastry',
                 420,
                 'jpeg',
-                'N8'
+                'N8',
+                 8
                 ),
                 (9,
                 'cookies, sugar, butter, cream cheese, cherries',
@@ -82,7 +90,8 @@ values (1,
                 'pastry',
                 400,
                 'jpeg',
-                 'A9'
+                 'A9',
+                 4
                 ),
                 (10,
                 'espresso, ladyfingers, mascarpone cheese, black rum, eggs, sugar, sweet cream, vanilla extract, salt, cocoa',
@@ -91,7 +100,8 @@ values (1,
                 'pastry',
                 350,
                 'jpeg',
-                 'M10'
+                 'M10',
+                 7
                 ),
                 (11,
                 'butter, sugar, hazelnuts, flour, eggs, orange zest, dark chocolate, sweet cream',
@@ -100,7 +110,8 @@ values (1,
                 'pastry',
                 450,
                 'jpeg',
-                 'O11'
+                 'O11',
+                 4
                 ),
                 (12,
                 'oreo, butter, lemon juice, lemon zest, pomegranate juice, sugar, eggs, sweet cream, salt, dark chocolate, pomegranate',
@@ -109,7 +120,8 @@ values (1,
                 'pastry',
                 520,
                 'jpeg',
-                 'N12'
+                 'N12',
+                 3
                 );
 
 insert into promocodes(id, name, discount)

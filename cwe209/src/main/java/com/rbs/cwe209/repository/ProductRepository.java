@@ -59,6 +59,22 @@ public class ProductRepository  {
         return new Product(id, ingredients,name,description,producttype,price,image,secret);
     }
 
+    public int getStock(String name){
+        String sqlQuery = "SELECT stock FROM " + table+" WHERE name='"+name+"'";
+        try (Connection connection = dataSource.getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet rs = statement.executeQuery(sqlQuery)) {
+            rs.next();
+            return rs.getInt(1);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            LOG.error(e.getSQLState());
+            LOG.error(e.getMessage());
+            LOG.error("QUERY: "+ sqlQuery);
+        }
+        return -1;
+    }
 
     public Product getProduct(Long id) {
         String sqlQuery = "SELECT id,ingredients,name, description,producttype,price,image,secret FROM " + table+" WHERE id="+id;

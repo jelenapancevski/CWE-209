@@ -24,6 +24,7 @@ create table products
     price int not null,
     image varchar(255) not null,
     secret varchar (255) not null,
+    stock int not null,
     PRIMARY KEY (ID)
 
 );

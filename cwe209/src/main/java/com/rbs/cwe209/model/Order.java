@@ -81,4 +81,10 @@ public class Order {
         }
 
     }
+    public int getAmount(String productname){
+        if(products.containsKey(productname)){
+           return products.get(productname).amount;
+        }
+        else return 0;
+    }
 }

@@ -77,7 +77,16 @@ public class ProductsController {
             String referer = request.getHeader("Referer");
             return "redirect:"+ referer;
         }
+        int quantity = amountNumber;
+        int stock = productRepository.getStock(productName);
+
         if (session.getAttribute("order") == null) {
+            if(quantity>stock){
+                //error out of stock
+                session.setAttribute("message","Error while adding to basket: There is not enough product with the name "+productName+" for the order, current available quantity is "+stock+" FOUND FLAG");
+                String referer = request.getHeader("Referer");
+                return "redirect:"+ referer;
+            }
             UsernamePasswordAuthenticationToken authentication = (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
             User user = (User) authentication.getPrincipal();
             Order o = new Order(user.getUsername());
@@ -86,6 +95,12 @@ public class ProductsController {
         }
         else{
             Order o =  (Order) session.getAttribute("order");
+            quantity+=o.getAmount(productName);
+            if(quantity>stock){
+                //error out of stock
+                session.setAttribute("message","Error while adding to basket: There is not enough product with the name "+productName+" for the order, current available quantity is "+stock+" FOUND FLAG");                String referer = request.getHeader("Referer");
+                return "redirect:"+ referer;
+            }
             o.addProduct(productName, amountNumber, price);
             Promocode promocode= (Promocode) session.getAttribute("promocodeSet");
             if(promocode!=null){
