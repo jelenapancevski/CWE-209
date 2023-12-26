@@ -10,7 +10,7 @@
             crossorigin="anonymous"></script>
     <meta name="_csrf" th:content="${_csrf.token}"/>
     <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
-    <link rel="stylesheet" th:href="@{/css/users.css}">
+    <link rel="stylesheet" th:href="@{/css/employees.css}">
     <script>
         function showBankAccount() {
             // Your logic to determine whether to show the bank account or not
@@ -20,8 +20,9 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <a class="navbar-brand" th:href="@{/home}">Delicious corner <img th:src="@{/backgrounds/logo.png}" alt="" id="logo"
-                                                                     style=" width: 50px;height: 70px;"></a>
+
+    <a class="navbar-brand" th:href="@{/home}"> Delicious corner <img th:src="@{/backgrounds/logo.png}" alt=""
+                                                                      id="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,13 +31,19 @@
         <ul class="navbar-nav" id="menu">
 
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/users}">Users</a>
+                <a class="nav-link" th:href="@{/products}">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/promotions}">Promotions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/basket}">Basket</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/searchByIngredient}">Search by ingredients</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" th:href="@{/employees}">Employees</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/orders}">Orders</a>
             </li>
             <li class="nav-item">
                 <form th:action="@{/logout}" method="post">
@@ -46,29 +53,32 @@
 
         </ul>
     </div>
-
 </nav>
 <div class="container-fluid">
 
-    <div class="row">
-        <div class="col">
+    <div class="row" th:each="user:${employees}">
+        <div class="col-lg-4 offset-lg-4" >
             <table class="table">
                 <tr>
-                    <td>Firstname</td>
-                    <td>Lastname</td>
-                    <td>Username</td>
-                    <td>Address</td>
-                    <td hidden>Bank account number</td>
+                    <td>
+                        <img class="card-image" th:src="@{'/staff/' + ${user._id} + '.jpg'}"/>
+                    </td>
                 </tr>
 
-                <tr th:each="user:${employees}">
-                    <td th:text="${user.firstname}"></td>
-                    <td th:text="${user.lastname}"></td>
-                    <td th:text="${user.username}"></td>
+                <tr>
+                    <td th:text="${user.firstname +' '+user.lastname}"></td>
+
+                </tr>
+                <tr>
+                    <td th:text="${user.usertype}"></td>
+                </tr>
+                <tr>
                     <td th:text="${user.address}"></td>
+                </tr>
+                <tr hidden>
+                    <td hidden>Bank account number</td>
                     <td th:text="${user.bankAccount}" hidden>
                     </td>
-
                 </tr>
             </table>
         </div>

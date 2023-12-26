@@ -101,7 +101,7 @@ public class UserRepository {
 
     public List<Employee> getEmployees(){
         List<Employee>employees = new ArrayList<>();
-        String query = "SELECT * FROM users WHERE usertype='employee'";
+        String query = "SELECT * FROM users WHERE usertype!='user' and usertype!='admin'";
         try (Connection connection = dataSource.getConnection();
              Statement statement = connection.createStatement();
              ResultSet rs = statement.executeQuery(query)) {

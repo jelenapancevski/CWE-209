@@ -32,6 +32,9 @@
                     <a class="nav-link" th:href="@{/searchByIngredient}" th:if="${#authentication.getPrincipal()?.usertype=='user'}">Search by ingredients</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" th:href="@{/employees}">Employees</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" th:href="@{/users}" th:if="${#authentication.getPrincipal()?.usertype=='admin'}">Users</a>
                 </li>
                 <li class="nav-item">
