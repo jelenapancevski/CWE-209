@@ -1,4 +1,5 @@
 package com.rbs.cwe209.repository;
+import com.rbs.cwe209.model.Employee;
 import com.rbs.cwe209.model.Product;
 import com.rbs.cwe209.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -83,5 +84,34 @@ public class UserRepository {
             e.printStackTrace();
         }
         return users;
+    }
+
+
+    public Employee createEmployee(ResultSet rs) throws SQLException{
+        Long id = rs.getLong(1);
+        String username = rs.getString(2);
+        String password = rs.getString(3);
+        String usertype = rs.getString(4);
+        String firstname = rs.getString(5);
+        String lastname = rs.getString(6);
+        String address = rs.getString(7);
+        String bankAccount = rs.getString(8);
+        return new Employee(id, username,password,usertype,firstname,lastname,address, bankAccount);
+    }
+
+    public List<Employee> getEmployees(){
+        List<Employee>employees = new ArrayList<>();
+        String query = "SELECT * FROM users WHERE usertype='employee'";
+        try (Connection connection = dataSource.getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet rs = statement.executeQuery(query)) {
+
+            while(rs.next()){
+                employees.add(createEmployee(rs));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return employees;
     }
 }

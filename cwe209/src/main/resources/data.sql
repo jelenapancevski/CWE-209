@@ -1,9 +1,10 @@
-insert into users(id, username, password, usertype, firstname, lastname, address)
-values (1, 'marijapetrovic', 'donutsrule23', 'user', 'Marija','Petrovic','Balkanska 53'),
-       (2, 'marko98', 'Password123#', 'user', 'Marko','Aleksic', 'Brace Jerkovic 23'),
-       (3, 'natalijaa', 'ilovesweets', 'user', 'Natalija','Peric','Hilandarska 72'),
-       (4, 'admin', 'Qwerty123#', 'admin','Petar','Nikolic','Nehruova 52');
-
+insert into users(id, username, password, usertype, firstname, lastname, address, bankAccount)
+values (1, 'marijapetrovic', 'donutsrule23', 'user', 'Marija','Petrovic','Balkanska 53', null),
+       (2, 'marko98', 'Password123#', 'user', 'Marko','Aleksic', 'Brace Jerkovic 23', null),
+       (3, 'natalijaa', 'ilovesweets', 'user', 'Natalija','Peric','Hilandarska 72', null),
+       (4, 'admin', 'Qwerty123#', 'admin','Petar','Nikolic','Nehruova 52', null),
+       (5, 'anastaff', 'bestcakeshop1', 'employee', 'Ana','Jokic','Milentija Popovica 95', '122333444455555'),
+       (6, 'bogdanstaff', 'chocoCake4', 'employee', 'Bogdan','Nikolic','Bulevak K. Aleksandra', '7364528938271638');
 
 insert into products(id, ingredients, name, description, producttype, price, image,secret, stock)
 values (1,

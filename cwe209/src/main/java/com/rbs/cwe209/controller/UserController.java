@@ -1,4 +1,5 @@
 package com.rbs.cwe209.controller;
+import com.rbs.cwe209.model.Employee;
 import com.rbs.cwe209.model.User;
 import com.rbs.cwe209.repository.UserRepository;
 import jakarta.servlet.http.HttpServletResponse;
@@ -31,5 +32,13 @@ public class UserController {
         model.addAttribute("users",users);
 
         return "users";
+    }
+
+    @GetMapping("/employees")
+    public String employees(Model model) {
+        List<Employee> employees= userRepository.getEmployees();
+        model.addAttribute("employees",employees);
+
+        return "employees";
     }
 }

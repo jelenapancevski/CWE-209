@@ -11,6 +11,7 @@ create table users
     firstname    varchar(255) not null,
     lastname    varchar(255) not null,
     address    varchar(255) not null,
+     bankAccount    varchar(255),
     PRIMARY KEY (ID)
 );
 
