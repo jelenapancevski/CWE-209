@@ -26,38 +26,49 @@
 
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+    <a class="navbar-brand" th:href="@{/home}">Delicious corner <img th:src="@{/backgrounds/logo.png}" alt="" id="logo" style=" width: 50px;height: 70px;"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav" id="menu">
 
-        <a class="navbar-brand" th:href="@{/home}"> Delicious corner <img th:src="@{/backgrounds/logo.png}" alt="" id="logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav" id="menu">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/products}" th:if="${#authentication.getPrincipal()?.usertype=='user'}">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/promotions}" th:if="${#authentication.getPrincipal()?.usertype=='user'}">Promotions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/basket}" th:if="${#authentication.getPrincipal()?.usertype=='user'}">Basket</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/searchByIngredient}"
+                   th:if="${#authentication.getPrincipal()?.usertype=='user'}">Search by ingredients</a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{/products}">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{/promotions}">Promotions</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{/basket}">Basket</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{/searchByIngredient}">Search by ingredients</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{/employees}">Employees</a>
-                </li>
-                <li class="nav-item">
-                    <form th:action="@{/logout}" method="post">
-                        <input type="submit" value="Sign Out" class="btn btn-primary" />
-                    </form>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/employees}" th:if="${#authentication.getPrincipal()?.usertype=='user'}">Employees</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/contactus}" th:if="${#authentication.getPrincipal()?.usertype=='user'}">Contact
+                    us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/users}" th:if="${#authentication.getPrincipal()?.usertype=='admin'}">Users</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/orders}" th:if="${#authentication.getPrincipal()?.usertype=='admin'}">Orders</a>
+            </li>
 
-            </ul>
-        </div>
+            <li class="nav-item">
+                <form th:action="@{/logout}" method="post">
+                    <input type="submit" value="Sign Out" class="btn btn-primary"/>
+                </form>
+            </li>
+        </ul>
+    </div>
 </nav>
 <div class="container-fluid">
 

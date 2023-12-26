@@ -16,7 +16,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/users").hasRole("ADMIN")
                         .requestMatchers("/","/products","/product/{id}","/createServerSessionOrder","/basket",
-                                "/searchForm","/searchResults","/promocode","/promotions","/promotion/{id}","/logs","/employees").hasRole("USER")
+                                "/searchForm","/searchResults","/promocode","/promotions","/promotion/{id}","/logs","/employees", "/contactus").hasRole("USER")
                         .requestMatchers("/resources/**", "/h2-console/**").permitAll().anyRequest().permitAll()
 
                 )

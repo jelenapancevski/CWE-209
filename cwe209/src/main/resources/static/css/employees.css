@@ -25,6 +25,10 @@ td {
     height: 70px;
 }
 
-table {
+.table {
     margin-top: 2%;
+}
+
+.table td{
+background-color:white;
 }

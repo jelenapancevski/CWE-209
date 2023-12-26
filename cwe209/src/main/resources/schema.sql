@@ -46,9 +46,8 @@ create table promotions
     image varchar(255) not NULL
 );
 
-create table questions
-(
-    id int NOT NULL AUTO_INCREMENT,
-    email varchar(255) not NULL,
-    question varchar(1000) not NULL,
+CREATE TABLE questions (
+    id INT NOT NULL AUTO_INCREMENT,
+    email VARCHAR(255) NOT NULL,
+    question VARCHAR(1000) NOT NULL
 );
