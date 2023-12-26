@@ -1,6 +1,7 @@
 drop table if exists users;
 drop table if exists products;
 drop table if exists promocodes;
+drop table if exists promotions;
 
 create table users
 (
@@ -43,4 +44,11 @@ create table promotions
     name varchar(255) not NULL,
     description varchar(1000) not NULL,
     image varchar(255) not NULL
+);
+
+create table questions
+(
+    id int NOT NULL AUTO_INCREMENT,
+    email varchar(255) not NULL,
+    question varchar(1000) not NULL,
 );

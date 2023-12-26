@@ -942,3 +942,5 @@ org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as express
 2023-12-26T17:56:08.843+01:00  INFO 13328 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2023-12-26T17:56:09.014+01:00  WARN 13328 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [126] milliseconds.
 2023-12-26T17:56:31.631+01:00  INFO 13328 --- [http-nio-8080-exec-5] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as marijapetrovic/donutsrule23
+2023-12-26T18:15:41.497+01:00  INFO 13328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-26T18:15:41.500+01:00  INFO 13328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
