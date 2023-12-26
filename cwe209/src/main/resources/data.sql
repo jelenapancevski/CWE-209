@@ -143,3 +143,7 @@ values(1,
  'Cookies for the little ones!',
 'With every purchase of any of our products, the youngest family members receive a free cookie of their choice. The promotion is valid every working day until the end of the year. See you there!',
 'jpg');
+
+insert into questions(id, email, question)
+values(1, 'petarpetrovic@gmail.com', 'Flag #9'),
+(2, 'coolemail@gmail.com', 'Found');
