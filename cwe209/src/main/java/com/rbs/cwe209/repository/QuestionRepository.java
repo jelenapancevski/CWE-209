@@ -15,20 +15,6 @@ public class QuestionRepository {
     public QuestionRepository(DataSource dataSource) {
         this.dataSource = dataSource;
     }
-
-    /* public int insert(String email,String question){
-         String query = "INSERT INTO questions (email,question) VALUES ('"+email+"','"+question+"');";
-         try (Connection connection = dataSource.getConnection();
-              Statement statement = connection.createStatement();
-              ResultSet rs = statement.executeQuery(query)) {
-             if(rs.next()){
-                rs.
-             }
-         } catch (SQLException e) {
-             e.printStackTrace();
-         }
-         return null;
-     }*/
     String url = "jdbc:h2:mem:cwe209"; // Change this URL according to your database configuration
     String user = "sa";
     String password = "password";

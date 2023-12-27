@@ -73,7 +73,30 @@
         <span style="color:darkred; padding:10px; background-color: white;" align="center" th:if="${session.message}"
               th:text="${session.message}"></span>
     </div>
-
+    <h2 class="centerClass" style="margin-top:2% ">Our locations</h2>
+    <div class="row" th:each="location:${locations}">
+        <div class="col-lg-4 offset-lg-4" >
+            <table class="table">
+                <tr>
+                    <th>
+                        <iframe th:src="${location.src}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </th>
+                </tr>
+                <tr>
+                    <td th:text="${location.name}"></td>
+                </tr>
+                <tr>
+                    <td th:text="${location.phone}"></td>
+                </tr>
+                <tr>
+                    <td th:text="${location.address}"></td>
+                </tr>
+                <tr>
+                    <td th:text="${location.workinghours}"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>
 
 </body>

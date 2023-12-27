@@ -147,3 +147,10 @@ values(1,
 insert into questions(id, email, question)
 values(1, 'petarpetrovic@gmail.com', 'Flag #9'),
 (2, 'coolemail@gmail.com', 'Found');
+
+insert into locations (id,name,phone,address,workinghours,src,open)
+
+values
+    (1,'Delicious corner #1','0653300512', 'Bulevar kralja Aleksandra 52, Beograd','Monday-Saturday 09:00h - 21:00h, Sunday 10:00h - 21:00h','https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.674334560905!2d20.4699161!3d44.80782519999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7b6baafee44d%3A0x2b5bc9450faea7ae!2sSlatkoteka%203%20-%20torte%2C%20krofne%20i%20pokloni!5e0!3m2!1ssr!2srs!4v1703688633359!5m2!1ssr!2srs',true),
+    (2,'Delicious corner #2','0655400502', 'Antifasisticke borbe 2, Novi Beograd','Monday-Sunday 09:00h - 21:00h','https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22640.318445431716!2d20.420649574316396!3d44.8207537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a654b4a8cca67%3A0x9327aa24208729d1!2sSlatkoteka%20-%20krofne%20i%20torte!5e0!3m2!1ssr!2srs!4v1703688921686!5m2!1ssr!2srs',true),
+    (3,'Secret delicious corner','0613048051', 'Visnjiceva 5, Beograd','Monday-Sunday 10:00h - 21:00h','https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22642.91711247066!2d20.3864819743164!3d44.814135599999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a65fe2af9d21d%3A0x556d32f818643a8!2sSlatkoteka%20Novi%20Beograd%20-%20krofne%2C%20torte%20i%20pokloni!5e0!3m2!1ssr!2srs!4v1703689004045!5m2!1ssr!2srs',false);
