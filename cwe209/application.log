@@ -1111,3 +1111,7 @@ insert into locations (id,name,phone,address,workinghours,src,open) values (1,'D
 2023-12-27T17:52:27.893+01:00  INFO 22840 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2023-12-27T17:52:28.054+01:00  WARN 22840 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [121] milliseconds.
 2023-12-27T17:52:38.310+01:00  INFO 22840 --- [http-nio-8080-exec-5] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as marijapetrovic/donutsrule23
+2023-12-27T19:47:54.397+01:00  INFO 22840 --- [http-nio-8080-exec-1] c.r.c.c.DatabaseAuthenticationProvider   : Logging in as marijapetrovic/donutsrule23
+2023-12-27T19:48:52.549+01:00 ERROR 22840 --- [http-nio-8080-exec-5] c.r.c.c.DatabaseAuthenticationProvider   : 02000
+2023-12-27T19:48:52.549+01:00 ERROR 22840 --- [http-nio-8080-exec-5] c.r.c.c.DatabaseAuthenticationProvider   : No data is available [2000-224]
+2023-12-27T19:48:52.549+01:00 ERROR 22840 --- [http-nio-8080-exec-5] c.r.c.c.DatabaseAuthenticationProvider   : QUERY: SELECT id,ingredients,name, description,producttype,price,image,secret FROM products WHERE id=25
