@@ -16,7 +16,7 @@ public class ProductRepository  {
     private static final String table = "products";
     private DataSource dataSource;
 
-    private static final Logger LOG = LoggerFactory.getLogger(DatabaseAuthenticationProvider.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ProductRepository.class);
 
 
     public ProductRepository(DataSource dataSource) {
